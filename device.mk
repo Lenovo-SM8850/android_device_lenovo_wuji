@@ -8,6 +8,10 @@ DEVICE_PATH := $(LOCAL_PATH)
 
 LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 
+# CNE
+PRODUCT_PACKAGES += \
+    CneApp.libvndfwk_detect_jni.qti_vendor_symlink
+
 # Display
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
