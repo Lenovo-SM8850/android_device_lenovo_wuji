@@ -32,12 +32,30 @@ vendor/firmware/10_60_blue.bin
 vendor/firmware/aw22xxx_fw.bin
 
 # WLAN
-vendor/bin/setwlansardsi0.sh
-vendor/bin/setwlansardsi1.sh
-vendor/bin/setwlansardsi2.sh
-vendor/bin/setwlansardsi3.sh
-vendor/bin/setwlansardsi4.sh
-vendor/etc/wifi/sar-vendor-cmd.xml
+vendor/etc/wifi/CNN_Orne_iPA_2G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_2G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_320MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_320MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_2G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_2G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_320MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_320MHz_MM.tflite
 
 # SmartPA calibration / camera native dependencies
 vendor/bin/aw882xx_cali

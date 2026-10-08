@@ -42,8 +42,6 @@ on boot
     chown system system /sys/class/remoteproc/remoteproc3/recovery
     chmod 0664 /sys/class/remoteproc/remoteproc3/recovery
     write /sys/class/remoteproc/remoteproc3/recovery enabled
-    # WLAN recovery
-    write /sys/kernel/cnss/recovery 1
 
 
 on property:sys.lenovo.attestationkey=1
@@ -58,33 +56,3 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 4742400
 on property:vendor.display.lcd_density=640
     setprop dalvik.vm.heapgrowthlimit 256m
-
-service setwlansardsi0 /vendor/bin/setwlansardsi0.sh
-    disabled
-    user root
-    oneshot
-    group root root
-
-service setwlansardsi1 /vendor/bin/setwlansardsi1.sh
-    disabled
-    user root
-    oneshot
-    group root root
-
-service setwlansardsi2 /vendor/bin/setwlansardsi2.sh
-    disabled
-    user root
-    oneshot
-    group root root
-
-service setwlansardsi3 /vendor/bin/setwlansardsi3.sh
-    disabled
-    user root
-    oneshot
-    group root root
-
-service setwlansardsi4 /vendor/bin/setwlansardsi4.sh
-    disabled
-    user root
-    oneshot
-    group root root
