@@ -648,7 +648,6 @@ vendor/lib64/libofestriping.so|985ab7dedbfed25b712abef2cd689d4ee6ef5ac7
 vendor/lib64/libois_channel_stub.so|831c1d27cfd5bd6f304ae7e4f024d23d8b9ebb34
 vendor/lib64/libproj_qmot_tracker.so|7e0f51529a68e5fcf362c7ee6abc1d9a1ffaf8c9
 vendor/lib64/libproj_sot.so|290a5726cc6536d03c0c100fdd50e2997be31e78
-vendor/lib64/libqfdadapter.so|1fc355bf980a94a7aff4bc1da19475649fa30c07
 vendor/lib64/libqll.so|1f925615b22ba6eb5efcc17d689b8a0a5ddd2989
 vendor/lib64/libqllengine.so|9fdb63a485e3d86550a3fd4fc0504e04bfe10a51
 vendor/lib64/libqms.so
@@ -767,3 +766,16 @@ vendor/firmware/goodix_config.bin
 vendor/firmware/goodix_config.cfgb
 vendor/firmware/goodix_firmware.bin
 vendor/firmware/goodix_test_limits.csv
+
+# Dolby audio
+# From TB324ZC_CN_OPEN_USER_Q00029.0_A16_ZUXOS_2.0.10.262_ST_260919
+vendor/lib64/c2.dolby.client.so
+vendor/lib64/c2.dolby.store.so
+vendor/lib64/libdolbydecoderprocessor.so
+vendor/lib64/libdolbyeglcore.so
+vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdolbyproxyandroid.so
+vendor/etc/dolby/dax-default.xml
+vendor/lib64/soundfx/libswdapaidl.so;DISABLE_DEPS
+vendor/lib64/soundfx/libswgamedapaidl.so
+vendor/lib64/libqfdadapter.so|1fc355bf980a94a7aff4bc1da19475649fa30c07
