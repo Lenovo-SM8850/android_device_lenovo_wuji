@@ -2,7 +2,7 @@
 ro.camerax.extensions.enabled=true
 
 # Device identity
-ro.vendor.config.lgsi.project=baldur
+ro.vendor.config.lgsi.project=wuji
 
 # Display HAL / gralloc
 ro.vendor.display.cabl=2
