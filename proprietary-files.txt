@@ -365,15 +365,20 @@ vendor/firmware/10_30_red.bin
 vendor/firmware/10_60_blue.bin
 
 # Media / Video
+vendor/etc/media_canoe_v3/video_system_specs.json
 vendor/etc/media_codecs_canoe_v2_vendor.xml
+vendor/etc/media_codecs_canoe_v3.xml
+vendor/etc/media_codecs_canoe_v3_vendor.xml
 vendor/etc/media_codecs_performance_canoe_sku1_vendor.xml
 vendor/etc/media_codecs_performance_canoe_sku2_vendor.xml
 vendor/etc/media_codecs_performance_canoe_sku3.xml
 vendor/etc/media_codecs_performance_canoe_sku3_vendor.xml
-vendor/etc/media_codecs_performance_canoe_v1.xml
 vendor/etc/media_codecs_performance_canoe_v1_vendor.xml
-vendor/etc/media_codecs_performance_canoe_v2.xml
 vendor/etc/media_codecs_performance_canoe_v2_vendor.xml
+vendor/etc/media_codecs_performance_canoe_v3.xml
+vendor/etc/media_codecs_performance_canoe_v3_vendor.xml
+vendor/etc/media_profiles_canoe_v3.xml
+vendor/etc/media_profiles_vendor.xml
 
 # Modem / Radio / QMI
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk;PRESIGNED
@@ -419,6 +424,13 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_server.xml
 vendor/firmware/evass.mbn
 vendor/firmware/gen80000_zap.mbn
 vendor/firmware/gen80200_zap.mbn
+vendor/firmware/venus_unsigned.mbn
+vendor/firmware/venus_v6.mbn
+vendor/firmware/venus_v6_rsa.mbn
+vendor/firmware/venus_v7.mbn
+vendor/firmware/vpu20_1v.mbn
+vendor/firmware/vpu20_1v_unsigned.mbn
+vendor/firmware/vpu30_4v.mbn
 vendor/firmware/vpu40_1v.mbn
 vendor/firmware/vpu40_1v_unsigned.mbn
 vendor/firmware/vpu40_2v.mbn
@@ -685,6 +697,8 @@ vendor/etc/init/vendor.qsap.mpamsvc.rc
 vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:vendor/etc/init/vendor.qti.hardware.vibrator.service-lenovo.rc
 vendor/etc/init/vendor.qti.qspmhal-service.rc
 vendor/etc/init/yepdiag.rc
+vendor/etc/media_codecs_performance_canoe_v1.xml
+vendor/etc/media_codecs_performance_canoe_v2.xml
 vendor/etc/mmi/layout/main.xml
 vendor/etc/perf/factorsconfig.xml
 vendor/etc/permissions/android.software.vulkan.deqp.level.xml
