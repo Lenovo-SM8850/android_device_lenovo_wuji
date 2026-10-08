@@ -1,0 +1,2 @@
+system_public_prop(lenovo_fingerprint_vendor_prop)
+vendor_restricted_prop(vendor_goodix_debug_prop)

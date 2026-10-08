@@ -76,6 +76,13 @@ blob_fixups: blob_fixups_user_type = {
             .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/libqcodec2_v4l2codec.so': blob_fixup()
         .call(keep_qti_decoder_output_retries, need_tmp_dir=False),
+    'vendor/etc/init/fingerprint-gfcap.rc': blob_fixup()
+        .regex_replace('    disabled\n',
+                       '    class hal\n'
+                       '    interface aidl android.hardware.biometrics.fingerprint.IFingerprint/default\n'
+                       '    interface aidl vendor.goodix.hardware.biometrics.fingerprint.cap.IGoodixFingerprintDaemon/default\n')
+        .regex_replace('0777', '0660')
+        .regex_replace('on property:sys.boot_completed=1\n    start vendor.fingerprint-gf\n', ''),
     (
         'vendor/etc/media_codecs_canoe_sku1_vendor.xml',
         'vendor/etc/media_codecs_canoe_v2_vendor.xml',

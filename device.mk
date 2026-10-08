@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
 # Performance
 # Permission XMLs
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
 # Power
 # Soong namespaces
@@ -153,6 +154,9 @@ include device/lenovo/sm8850-common/device-configs.mk
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/lenovo/sm8850-common/common.mk)
+
+# VINTF
+DEVICE_MANIFEST_FILE += device/lenovo/wuji/vintf/manifest_canoe.xml
 
 # Include the proprietary files makefile.
 $(call inherit-product, vendor/lenovo/wuji/wuji-vendor.mk)
