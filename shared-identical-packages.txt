@@ -1,3 +1,4 @@
 # Shared ABI packages
 
-
+vendor/bin/fm_qsoc_patches
+vendor/lib64/libwms.so

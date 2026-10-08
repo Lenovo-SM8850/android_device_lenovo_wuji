@@ -454,7 +454,7 @@ vendor/lib64/libnicm_netlink.so
 vendor/lib64/libnicm_utils.so
 vendor/lib64/libqcrilNrFramework.so
 vendor/lib64/vendor.qti.ImsRtpService-aidl-Impl.so
-vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
+vendor/lib64/vendor.qti.qccvndhal_aidl-V2-ndk.so
 vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 
 # Display calibration
@@ -472,25 +472,52 @@ vendor/etc/displayconfig/display_id_4630947039571902850.xml
 vendor/etc/displayconfig/display_id_4630947039571902851.xml
 vendor/etc/displayconfig/display_id_4630947075271898515.xml
 
+# Platform HAL interfaces
+vendor/etc/seccomp_policy/atfwd@2.0.policy
+
+# Platform VINTF
+vendor/etc/vintf/manifest/atfwd-saidl.xml
+vendor/etc/vintf/manifest/deviceinfo-saidl.xml
+vendor/etc/vintf/manifest_whale.xml
+
 # Platform configuration
+vendor/etc/DOFG_CZRXD.pmd
+vendor/etc/DOFG_PUBG.pmd
+vendor/etc/DOFG_XCPD.pmd
+vendor/etc/DOFG_YHTJ.pmd
+vendor/etc/DOFG_YJWJ.pmd
+vendor/etc/assets/usrimg
 vendor/etc/backend_conf.xml
 vendor/etc/dcp_symbols/dcp.elf
-vendor/etc/qvirtmgr-vndr.json
-vendor/etc/yellochick_v1.pmd
 
 # Init
 vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
 
 # Platform runtime
+product/overlay/CarrierConfigResCommon_Sys.apk:product/app/CarrierConfigResCommon_Sys/CarrierConfigResCommon_Sys.apk;PRESIGNED
+vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/vendor.lenovo.hardware.touchscreen-service
+vendor/bin/ks
+vendor/bin/qtigetprop
+vendor/bin/qtisetprop
+vendor/bin/start_subsys.sh
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
+vendor/lib64/cellularSecurityModule.so
+vendor/lib64/deviceInfoServiceModuleNr.so
+vendor/lib64/libATFWD.so
+vendor/lib64/libQtiSocket.so
+vendor/lib64/libjnihelper.so
+vendor/lib64/liblqe.so
+vendor/lib64/libqsegnetunittest.so
+vendor/lib64/libwqe.so
+vendor/lib64/qtiPeripheralMgr.so
+vendor/lib64/qtiwakelock.so
+
 # Performance
 vendor/lib64/libsystem_health_mon2.so
-vendor/bin/oemowninfo
-vendor/bin/profile_config_service.sh
 
 # Firmware / Security
 vendor/bin/hw/android.hardware.gatekeeper-rust-service-qti
