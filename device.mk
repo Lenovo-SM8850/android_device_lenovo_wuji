@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayBaldur \
-    FrameworksResTargetWuji \
+    FrameworksResTargetWuji
 
 # Pen
 PRODUCT_PACKAGES += \
