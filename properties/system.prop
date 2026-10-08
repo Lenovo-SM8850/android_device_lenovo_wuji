@@ -1,2 +1,6 @@
 # SurfaceFlinger idle detection
 ro.surface_flinger.set_idle_timer_ms=2000
+
+# Telephony
+ro.telephony.default_network=26,26
+ro.telephony.sim_slots.count=2

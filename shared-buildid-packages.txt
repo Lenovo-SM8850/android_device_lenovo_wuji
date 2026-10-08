@@ -2,6 +2,7 @@
 
 vendor/bin/cnd
 vendor/bin/hw/vendor.qti.hardware.secureprocessor
+vendor/bin/ims_rtp_daemon
 vendor/bin/nicmd
 vendor/bin/qseecomd
 vendor/bin/trusteduilistener

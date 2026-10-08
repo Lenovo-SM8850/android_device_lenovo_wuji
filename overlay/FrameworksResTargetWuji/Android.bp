@@ -3,6 +3,6 @@
 //
 
 runtime_resource_overlay {
-    name: "FrameworksResTargetBaldur",
+    name: "FrameworksResTargetWuji",
     vendor: true,
 }

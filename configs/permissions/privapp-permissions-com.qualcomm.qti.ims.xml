@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<permissions>
+    <privapp-permissions package="com.qualcomm.qti.ims">
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.MODIFY_PHONE_STATE" />
+        <permission name="com.qti.permission.BIND_QTI_IMS_SERVICE" />
+        <permission name="com.qti.permission.RECEIVE_ESSENTIAL_RECORDS_LOADED" />
+    </privapp-permissions>
+</permissions>
