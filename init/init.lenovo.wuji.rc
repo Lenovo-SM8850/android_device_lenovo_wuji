@@ -36,6 +36,12 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 2112000
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 2880000
 
+on post-fs-data
+
+    # ArcSoft storage
+    mkdir /data/vendor/arcsoft 0777 system system
+    restorecon_recursive /data/vendor/arcsoft
+
 on charger
     # Leave power-off charging patterns to the stock battery rc.
     stop vendor.light-default
