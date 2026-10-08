@@ -384,7 +384,6 @@ vendor/etc/qcril_database/upgrade/other/0006_version_change_property_table_qcril
 vendor/etc/qcril_database/upgrade/other/0007_version_update_ecc_table_qcrilnr.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
-vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/telephony_packages.xml
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/android.hardware.radio.data.xml
@@ -412,8 +411,6 @@ vendor/firmware/vpu40_2v_unsigned.mbn
 vendor/firmware/vpu40_2v_v1.mbn
 vendor/firmware/vpu40_2v_v1_unsigned.mbn
 vendor/lib64/lib-imsdcservice.so
-
-# Performance
 vendor/lib64/libQtiRilLoadable.so
 vendor/lib64/libloc_ril_client.so
 vendor/lib64/libqcrilDataModule.so
@@ -465,6 +462,9 @@ vendor/lib64/vendor.qti.hardware.radio.qtiradioconfig-V6-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server-V1-ndk.so
+
+# Performance
+vendor/lib64/libsystem_health_mon2.so
 
 # Pinned native libraries
 vendor/bin/cnd
@@ -587,7 +587,6 @@ vendor/lib64/camera/components/com.qti.node.mctfalign.so
 vendor/bin/thermal-engine-v2
 
 # Thermal power tuning
-vendor/etc/perf/factorsconfig.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/qapeboostsconfig.xml
 vendor/etc/perf/targetconfig.xml
@@ -659,6 +658,7 @@ vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:vendor/etc/init/vendor.q
 vendor/etc/init/vendor.qti.qspmhal-service.rc
 vendor/etc/init/yepdiag.rc
 vendor/etc/mmi/layout/main.xml
+vendor/etc/perf/factorsconfig.xml
 vendor/etc/permissions/android.software.vulkan.deqp.level.xml
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/pwr/PSMPowerOptFeature.xml
@@ -669,6 +669,7 @@ vendor/etc/res/images/WQHD_1840_2944/charger/battery_fail.png
 vendor/etc/res/images/WQHD_1840_2944/charger/battery_scale.png
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/hexlp.policy
+vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/seccomp_policy/qspm.policy
 vendor/etc/seccomp_policy/qwesd@2.0.policy
 vendor/etc/sensors/config/kaanapali_sx932x_0.json
