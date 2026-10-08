@@ -75,6 +75,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/perf_hint_threshold.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/perf_hint_threshold.xml \
     $(LOCAL_PATH)/configs/display/privacy_regions_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/privacy_regions_offsets.xml
 
+# IMS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.qualcomm.qti.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.qualcomm.qti.ims.xml
+
 # Init
 PRODUCT_PACKAGES += ueventd.wuji.rc
 
@@ -83,11 +87,37 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResTargetWuji
+    FrameworksResTargetWuji \
+    TelephonyResOverlayWuji
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Telephony
+PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti-telephony-hidl-wrapper-prd \
+    qti-telephony-utils \
+    qti-telephony-utils-prd \
+    qti_telephony_hidl_wrapper.xml \
+    qti_telephony_hidl_wrapper_prd.xml \
+    qti_telephony_utils.xml \
+    qti_telephony_utils_prd.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += telephony-ext
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml
 
 # Touch
 PRODUCT_PACKAGES += TouchscreenRotationTarget
