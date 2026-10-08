@@ -41,11 +41,21 @@ vendor/etc/wifi/sar-vendor-cmd.xml
 
 # SmartPA calibration / camera native dependencies
 vendor/bin/aw882xx_cali
+vendor/bin/smartpa_tool
 vendor/firmware/aw882xx_acf.bin
 vendor/lib64/camera/components/com.qti.node.mctfalign.so
 
 # Audio
+vendor/etc/DIAG_audio_07-07.cfg
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
+vendor/etc/acdbdata/alor_cdp/CDP_alor_acdb_cal.acdb
+vendor/etc/acdbdata/alor_cdp/CDP_alor_workspaceFileXml.qwsp
+vendor/etc/acdbdata/alor_mtp_wcd9378/MTP_alor_wcd9378_acdb_cal.acdb
+vendor/etc/acdbdata/alor_mtp_wcd9378/MTP_alor_wcd9378_workspaceFileXml.qwsp
+vendor/etc/acdbdata/alor_mtp_wcd939x/MTP_alor_wcd939x_acdb_cal.acdb
+vendor/etc/acdbdata/alor_mtp_wcd939x/MTP_alor_wcd939x_workspaceFileXml.qwsp
+vendor/etc/acdbdata/alor_qrd/QRD_alor_acdb_cal.acdb
+vendor/etc/acdbdata/alor_qrd/QRD_alor_workspaceFileXml.qwsp
 vendor/etc/acdbdata/canoe_atp/ATP_acdb_cal.acdb
 vendor/etc/acdbdata/canoe_atp/ATP_workspaceFileXml.qwsp
 vendor/etc/acdbdata/canoe_cdp/CDP_acdb_cal.acdb
@@ -64,7 +74,16 @@ vendor/etc/acdbdata/canoe_qrd/QRD_acdb_cal.acdb
 vendor/etc/acdbdata/canoe_qrd/QRD_workspaceFileXml.qwsp
 vendor/etc/acdbdata/canoe_qrd_wsa884x/QRD_canoe_wsa884x_acdb_cal.acdb
 vendor/etc/acdbdata/canoe_qrd_wsa884x/QRD_canoe_wsa884x_workspaceFileXml.qwsp
-vendor/etc/audio/sku_canoe/mixer_paths_canoe_qrd_wsa884x.xml
+vendor/etc/acdbdata/ffv_models/ffv__16.0.1.1_0.0__eai_5.7_enpu_v6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.40.1.10_0.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.8.1_0.0__19.0.1_0.0__eai_5.6.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.40.1.11_1.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.8.1_1.0__19.0.1_1.0__eai_5.6.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.40.2_1.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.6.0_1.0__eai_5.11.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.40.2_1.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.8.1_1.0__19.0.1_1.0__eai_5.11.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.60.1.3_1.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__eai_5.6.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.8.14_0.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.6.0_0.0__eai_5.11.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.8.14_1.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.6.0_1.0__19.0.1_1.0__eai_5.7.0_enpuv6.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.8.14_1.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__11.6.0_1.0__eai_5.11.0_enpuv6.pmd
+vendor/etc/audio/sku_whale/audio_effects_config_stub.xml
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_DEPS;REQUIRED=manifest_audiocorehal_default.xml

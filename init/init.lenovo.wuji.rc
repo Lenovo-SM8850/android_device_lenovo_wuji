@@ -34,8 +34,6 @@ import /vendor/etc/init/hw/init.lenovo.common.rc
 
 on boot
 
-    # Speaker id
-    chown media audio /sys/kernel/spk_id_gpio_level/spk_id_level
     # MPSS recovery
     chown system system /sys/class/remoteproc/remoteproc3/recovery
     chmod 0664 /sys/class/remoteproc/remoteproc3/recovery
