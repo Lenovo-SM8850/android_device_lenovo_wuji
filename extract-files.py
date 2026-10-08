@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import hashlib
 from pathlib import Path
 
 from extract_utils.fixups_blob import (
@@ -32,6 +33,24 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
 }
 
+def keep_qti_decoder_output_retries(ctx, file, file_path, **kwargs):
+    path = Path(file_path)
+    data = bytearray(path.read_bytes())
+    expected = '87f54f332136968a44bdb7e43d651e53fec3c1a6a56798af8bb24dd8af9695fd'
+    actual = hashlib.sha256(data).hexdigest()
+    if actual != expected:
+        raise ValueError(f'{file.dst}: unexpected QTI decoder SHA256 {actual}; expected {expected}')
+
+    # Keep delayed output retries after the QTI decoder timeout.
+    offset = 0x1b0a3c
+    data[offset:offset + 4] = bytes.fromhex('4b 00 00 14')
+    expected = '97823e087e3d34cbf53ca9334e8c5f0002cd265237b9c75600fbe7afa8c6fc97'
+    actual = hashlib.sha256(data).hexdigest()
+    if actual != expected:
+        raise ValueError(f'{file.dst}: unexpected patched QTI decoder SHA256 {actual}; expected {expected}')
+    path.write_bytes(data)
+
+
 # Device blob fixups
 blob_fixups: blob_fixups_user_type = {
         (
@@ -51,6 +70,8 @@ blob_fixups: blob_fixups_user_type = {
             .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
         'vendor/lib64/libqcodec2_core.so': blob_fixup()
             .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'vendor/lib64/libqcodec2_v4l2codec.so': blob_fixup()
+        .call(keep_qti_decoder_output_retries, need_tmp_dir=False),
     (
         'vendor/etc/media_codecs_canoe_sku1_vendor.xml',
         'vendor/etc/media_codecs_canoe_v2_vendor.xml',
