@@ -107,6 +107,7 @@
 
     <!-- Display cutout -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+    <bool name="config_hideDisplayCutoutInLandscape">true</bool>
     <!-- The stock circle sits a little low on the camera ring, so the ring showed above the
          island. Its top is 2 dp higher here and its bottom stays where it was. -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 16,23 A 16,16 0 1,1 -16,23 A 16,16 0 1,1 16,23 Z @dp</string>
