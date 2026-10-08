@@ -408,21 +408,6 @@ vendor/etc/display/DPU870.xml
 vendor/etc/display/DPU920.xml
 vendor/lib64/libhdrvivid.so
 
-# Face unlock
-vendor/bin/hw/android.hardware.biometrics.face@4.0-service.face
-vendor/firmware/arcface_ta.b00
-vendor/firmware/arcface_ta.b01
-vendor/firmware/arcface_ta.b03
-vendor/firmware/arcface_ta.b04
-vendor/firmware/arcface_ta.b05
-vendor/firmware/arcface_ta.b06
-vendor/firmware/arcface_ta.b07
-vendor/firmware/arcface_ta.b08
-vendor/firmware/arcface_ta.mdt
-vendor/lib64/libarcsoft_face_biometric.so
-vendor/lib64/libarcsoft_faceid.so
-vendor/lib64/libfaceid_ca_proxy.arcsoft.so
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.gfcap
 vendor/bin/hw/qfp-daemon
@@ -1059,5 +1044,3 @@ vendor/lib64/libsns_device_mode_stub.so|5e3a9664fb4afbf8d27224592bb2ff76aeaf04e6
 vendor/lib64/libsns_direct_channel_stub.so|9bda0bcf6d08af308bd0d6c8203b267c2117ac94
 vendor/lib64/libsns_dynamic_loader_stub.so|c4377aae98cd7d2d7de2c2015c28ec9feee88502
 vendor/lib64/libsns_remote_proc_state_stub.so|91b26d4d3d691b5513b1da399c42dc34b24bacc2
-vendor/lib64/libarcsoft_face_mink.so|b8464c712c9badcb5a93abeae423233766800e74
-vendor/lib64/libbiometricsface_ca.arcsoft.so|c531d4aa1677c341cf88c8fad8d2316c2990e29e
