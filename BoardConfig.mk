@@ -26,5 +26,8 @@ TARGET_RECOVERY_UI_MAX_BRIGHTNESS_FILE := /sys/class/backlight/panel0-backlight/
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 1785888000
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 1785888000
 
+# Early Wi-Fi dependencies
+BOOT_KERNEL_MODULES += libarc4.ko rfkill.ko
+
 # Include the proprietary files makefile.
 include vendor/lenovo/wuji/BoardConfigVendor.mk
