@@ -1,0 +1,4 @@
+
+
+# Dolby Vision calibration
+/system/etc/dolby_vision\.cfg    u:object_r:dolby_vision_config_file:s0
