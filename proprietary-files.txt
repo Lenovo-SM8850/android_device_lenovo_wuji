@@ -366,6 +366,7 @@ system/lib64/libdolbyproxyandroid.so;MODULE_SUFFIX=-system
 # DSP / FastRPC
 vendor/lib/rfsa/adsp/capi_dofg_nn.so.1
 vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
+vendor/lib64/rfs/dsp/libvpp_frc.so
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.gfcap
@@ -424,10 +425,10 @@ vendor/lib64/vendor.qti.gnss-service.so
 vendor/bin/init.qti.media.sh
 vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libvideooptfeature.so
+vendor/lib64/rfs/dsp/libvpp_gfrc_networks.so
 vendor/lib64/rfs/dsp/libvpp_svc_skel.so
 
 # Media / Video
-vendor/etc/media_canoe_v3/video_system_specs.json
 vendor/etc/media_codecs_canoe_v2_vendor.xml
 vendor/etc/media_codecs_canoe_v3.xml
 vendor/etc/media_codecs_canoe_v3_vendor.xml
@@ -568,6 +569,7 @@ vendor/lib64/libQnnHtpV81Stub.so
 vendor/lib64/libQnnNetRunDirectV81Skel.so
 vendor/lib64/rfs/dsp/libnsp_ipc_cdsp_skel.so
 vendor/lib64/rfs/dsp/libnspextensioncopyprovider.so
+vendor/lib64/rfs/dsp/libnspextensionfrcprovider.so
 vendor/lib64/rfs/dsp/libnspextensiongenericqnnprovider.so
 vendor/lib64/rfs/dsp/libnspextensionsuperresolutionprovider.so
 vendor/lib64/rfs/dsp/libsvdsp.so
