@@ -67,7 +67,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <effect name="notification_helper" library="volume_listener" uuid="0b776dde-0590-11e5-81ba-0025b32654a0"/>
         <effect name="quasar" library="quasar" uuid="71d0e2ee-e44d-483d-a809-09e75ee55ecd"/>
     </effects>
-
     <preprocess>
         <stream type="voice_communication">
             <apply effect="aec"/>
