@@ -29,6 +29,10 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
+def lib_fixup_system_suffix(lib: str, partition: str) -> str:
+    return f'{lib}-system' if partition == 'system_ext' else lib
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
 }

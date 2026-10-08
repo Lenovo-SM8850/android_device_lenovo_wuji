@@ -38,10 +38,6 @@ on early-init
 
 on boot
 
-    # MPSS recovery
-    chown system system /sys/class/remoteproc/remoteproc3/recovery
-    chmod 0664 /sys/class/remoteproc/remoteproc3/recovery
-    write /sys/class/remoteproc/remoteproc3/recovery enabled
 
 
 on property:vendor.display.lcd_density=640
