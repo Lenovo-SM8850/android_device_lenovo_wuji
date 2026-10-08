@@ -113,4 +113,7 @@
     <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
     <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
     <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- Evolution X -->
+    <string name="config_stockFingerprint" translatable="false">Lenovo/TB324ZC_PRC/TB324ZC:16/BQ2A.250831.001/ZUXOS_2.0.10.262_260919_PRC:user/release-keys</string>
 </resources>
