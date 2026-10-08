@@ -109,6 +109,7 @@ module = ExtractUtilsModule(
 )
 
 
+
 shared_module = ExtractUtils.get_module('sm8850-common', module.vendor)
 module.blob_fixups = {**shared_module.blob_fixups, **module.blob_fixups}
 module.lib_fixups = {**shared_module.lib_fixups, **module.lib_fixups}

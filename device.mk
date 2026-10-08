@@ -115,6 +115,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
+# Recovery touch
+PRODUCT_PACKAGES += \
+    thpd-goodix-recovery \
+    libgdix_tsc.recovery \
+    libgdix_afe.recovery \
+    libgdix_tsa.recovery \
+    libgdix_tsd.recovery
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -146,7 +154,11 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    thpd
+    thpd \
+    libgdix_afe \
+    libgdix_tsa \
+    libgdix_tsc \
+    libgdix_tsd
 
 LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 

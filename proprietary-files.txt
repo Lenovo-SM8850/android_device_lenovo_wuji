@@ -640,10 +640,10 @@ vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
 
 # Platform runtime
 product/overlay/CarrierConfigResCommon_Sys.apk:product/app/CarrierConfigResCommon_Sys/CarrierConfigResCommon_Sys.apk;PRESIGNED
-system/lib64/libgdix_afe.so:vendor/lib64/libgdix_afe.so;TRYSRCFIRST
-system/lib64/libgdix_tsa.so:vendor/lib64/libgdix_tsa.so;TRYSRCFIRST
-system/lib64/libgdix_tsc.so:vendor/lib64/libgdix_tsc.so;TRYSRCFIRST
-system/lib64/libgdix_tsd.so:vendor/lib64/libgdix_tsd.so;TRYSRCFIRST
+system/lib64/libgdix_afe.so:vendor/lib64/libgdix_afe.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_afe_blob
+system/lib64/libgdix_tsa.so:vendor/lib64/libgdix_tsa.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_tsa_blob
+system/lib64/libgdix_tsc.so:vendor/lib64/libgdix_tsc.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_tsc_blob
+system/lib64/libgdix_tsd.so:vendor/lib64/libgdix_tsd.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_tsd_blob
 vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/vendor.lenovo.hardware.touchscreen-service
 vendor/bin/ks
