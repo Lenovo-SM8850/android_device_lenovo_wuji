@@ -46,11 +46,11 @@ on boot
     write /sys/kernel/cnss/recovery 1
 
 
+on property:sys.lenovo.attestationkey=1
+    setprop ro.odm.lenovo.attestationkey ${sys.lenovo.attestationkey}
+
 on property:vendor.display.lcd_density=640
     setprop dalvik.vm.heapgrowthlimit 256m
-
-on property:sys.RemotelyProvisionedKey.fetch.completed=1
-    setprop ro.odm.lenovo.attestationkey ${sys.RemotelyProvisionedKey.fetch.completed}
 
 service setwlansardsi0 /vendor/bin/setwlansardsi0.sh
     disabled
