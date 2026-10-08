@@ -26,34 +26,28 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#
 # Changes from Qualcomm Technologies, Inc. are provided under the following license:
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 import /vendor/etc/init/hw/init.lenovo.common.rc
 
-on early-init
-    export MEMTAG_OPTIONS off
-
 on boot
 
     # Speaker id
     chown media audio /sys/kernel/spk_id_gpio_level/spk_id_level
-    # rkp_md5
+    # RKP MD5
     chown root shell /sys/kernel/rkp_md5/rkp_md5
-    #Add for mpss and cnss ssr
+    # MPSS recovery
     chown system system /sys/class/remoteproc/remoteproc3/recovery
     chmod 0664 /sys/class/remoteproc/remoteproc3/recovery
     write /sys/class/remoteproc/remoteproc3/recovery enabled
+    # WLAN recovery
     write /sys/kernel/cnss/recovery 1
+
 
 on property:vendor.display.lcd_density=640
     setprop dalvik.vm.heapgrowthlimit 256m
-
-on property:sys.boot_completed=1 && property:ro.vendor.build.type=userdebug
-    mkdir /mnt/vendor/logfs 0644 system system
-    mount vfat /dev/block/by-name/logfs /mnt/vendor/logfs rw wait noatime
 
 on property:sys.RemotelyProvisionedKey.fetch.completed=1
     setprop ro.odm.lenovo.attestationkey ${sys.RemotelyProvisionedKey.fetch.completed}
@@ -87,3 +81,11 @@ service setwlansardsi4 /vendor/bin/setwlansardsi4.sh
     user root
     oneshot
     group root root
+
+on property:vendor.lenovo.game_mode=1
+    write /sys/devices/system/cpu/cpu0/thermal/control 300
+    restart thermal-engine
+
+on property:vendor.lenovo.game_mode=0
+    write /sys/devices/system/cpu/cpu0/thermal/control 0
+    restart thermal-engine

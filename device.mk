@@ -3,27 +3,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/lenovo/baldur
+LOCAL_PATH := device/lenovo/wuji
+LENOVO_HAS_MODEM := true
 
-# Device init
-PRODUCT_PACKAGES += init.lenovo.lcd.rc
-
-PRODUCT_PACKAGES += ueventd.lenovo.rc
-
-PRODUCT_PACKAGES += \
-    init.lenovo.baldur.rc
-
-# Pen
-PRODUCT_PACKAGES += \
-    init.baldur.pen.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc
-
-# Display
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Hardware configuration
+# Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_alor/resourcemanager_alor_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_alor/resourcemanager_alor_cdp.xml \
     $(LOCAL_PATH)/configs/audio/sku_alor/resourcemanager_alor_mtp_wcd9378.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_alor/resourcemanager_alor_mtp_wcd9378.xml \
@@ -39,8 +22,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_cdp.xml \
     $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_cdp_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_cdp_wsa884x.xml \
     $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_cdp_wsa885xi2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_cdp_wsa885xi2s.xml \
-    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946261688083603.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946261688083603.xml \
     $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946916234099603.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946916234099603.xml
+
+# Device init
+PRODUCT_PACKAGES += ueventd.lenovo.rc
+
+PRODUCT_PACKAGES += \
+    init.lenovo.wuji.rc
+
+# Display
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # IMS
 # SystemUI requires IMS discovery on Wi-Fi-only devices.
@@ -52,21 +43,26 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayBaldur \
     FrameworksResTargetBaldur
 
+# Pen
+PRODUCT_PACKAGES += \
+    init.baldur.pen.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc
+
+# Power
 # Recovery touch requires Novatek firmware in the direct search path.
 PRODUCT_COPY_FILES += \
-    vendor/lenovo/baldur/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
+    vendor/lenovo/wuji/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-LENOVO_DEVICE_CONFIG_PATH := device/lenovo/baldur
+LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/lenovo/sm8850-common/common.mk)
 
 # Include the proprietary files makefile.
-$(call inherit-product, vendor/lenovo/baldur/baldur-vendor.mk)
-
-# Touchscreen rotation configuration
-PRODUCT_PACKAGES += TouchscreenRotationTarget
+$(call inherit-product, vendor/lenovo/wuji/wuji-vendor.mk)
