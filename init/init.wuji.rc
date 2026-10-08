@@ -36,6 +36,7 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 2112000
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 2880000
 
+on post-fs-data
     wait_for_prop vendor.all.modules.ready 1
     chown system system /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_nav_switch
     chown system system /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_suspend
@@ -45,6 +46,11 @@ on early-init
     chown system system /sys/bus/platform/devices/gt9976n_thp.0/esd_info
     chmod 0220 /sys/bus/platform/devices/gt9976n_thp.0/gesture_enable
     chmod 0660 /sys/bus/platform/devices/gt9976n_thp.0/esd_info
+
+    # ArcSoft storage
+    mkdir /data/vendor/arcsoft 0777 system system
+    restorecon_recursive /data/vendor/arcsoft
+
 on charger
     # Leave power-off charging patterns to the stock battery rc.
     stop vendor.light-default
