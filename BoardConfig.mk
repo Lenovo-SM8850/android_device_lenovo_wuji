@@ -12,14 +12,11 @@ include device/lenovo/sm8850-common/BoardConfigCommon.mk
 TARGET_OTA_ASSERT_DEVICE := wuji,TB324ZC
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 360
 
 # Properties
 ENABLE_VENDOR_RIL_SERVICE := true
-
-# Recovery
-TARGET_RECOVERY_UI_BRIGHTNESS_FILE := /sys/class/backlight/panel0-backlight/brightness
-TARGET_RECOVERY_UI_MAX_BRIGHTNESS_FILE := /sys/class/backlight/panel0-backlight/max_brightness
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 
 # Verified Boot
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 1785888000
