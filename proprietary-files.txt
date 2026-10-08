@@ -387,6 +387,8 @@ vendor/etc/media_codecs_performance_canoe_sku3.xml
 vendor/etc/media_codecs_performance_canoe_sku3_vendor.xml
 vendor/etc/media_codecs_performance_canoe_v1_vendor.xml
 vendor/etc/media_codecs_performance_canoe_v2_vendor.xml
+vendor/etc/media_codecs_performance_canoe_v3.xml
+vendor/etc/media_codecs_performance_canoe_v3_vendor.xml
 vendor/etc/media_profiles_canoe_sku3.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib64/libqc2vppfilter.so
@@ -460,6 +462,8 @@ vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
 
 # Platform runtime
 vendor/bin/hw/vendor.lenovo.hardware.touchscreen-service
+# Performance
+vendor/lib64/libsystem_health_mon2.so
 vendor/bin/oemowninfo
 vendor/bin/profile_config_service.sh
 

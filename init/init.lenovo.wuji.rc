@@ -32,6 +32,10 @@
 
 import /vendor/etc/init/hw/init.lenovo.common.rc
 
+on early-init
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 2112000
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 2880000
+
 on boot
 
     # MPSS recovery
@@ -45,6 +49,13 @@ on boot
 on property:sys.lenovo.attestationkey=1
     setprop ro.odm.lenovo.attestationkey ${sys.lenovo.attestationkey}
 
+on property:sys.boot_completed=1
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 3628800
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 4742400
 on property:vendor.display.lcd_density=640
     setprop dalvik.vm.heapgrowthlimit 256m
 
@@ -77,11 +88,3 @@ service setwlansardsi4 /vendor/bin/setwlansardsi4.sh
     user root
     oneshot
     group root root
-
-on property:vendor.lenovo.game_mode=1
-    write /sys/devices/system/cpu/cpu0/thermal/control 300
-    restart thermal-engine
-
-on property:vendor.lenovo.game_mode=0
-    write /sys/devices/system/cpu/cpu0/thermal/control 0
-    restart thermal-engine
