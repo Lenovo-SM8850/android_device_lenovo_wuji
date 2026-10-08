@@ -30,31 +30,12 @@ vendor/lib64/soundfx/libquasar.so
 
 # Camera
 vendor/bin/camera-preamble.json
-vendor/firmware/CAMERA_ICP.b00
-vendor/firmware/CAMERA_ICP.b01
-vendor/firmware/CAMERA_ICP.b02
-vendor/firmware/CAMERA_ICP.b04
-vendor/firmware/CAMERA_ICP.b08
-vendor/firmware/CAMERA_ICP.b09
-vendor/firmware/CAMERA_ICP.b17
-vendor/firmware/CAMERA_ICP.b18
-vendor/firmware/CAMERA_ICP.b20
-vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP.mbn
-vendor/firmware/CAMERA_ICP.mdt
-vendor/firmware/CAMERA_ICP_1.b00
-vendor/firmware/CAMERA_ICP_1.b01
-vendor/firmware/CAMERA_ICP_1.b02
-vendor/firmware/CAMERA_ICP_1.b03
-vendor/firmware/CAMERA_ICP_1.b04
-vendor/firmware/CAMERA_ICP_1.b08
-vendor/firmware/CAMERA_ICP_1.b09
-vendor/firmware/CAMERA_ICP_1.b17
-vendor/firmware/CAMERA_ICP_1.b18
-vendor/firmware/CAMERA_ICP_1.b20
-vendor/firmware/CAMERA_ICP_1.elf
 vendor/firmware/CAMERA_ICP_1.mbn
-vendor/firmware/CAMERA_ICP_1.mdt
+vendor/lib64/camera/com.qti.chi.featurecompatibilityspecification.netrani.bin
+vendor/lib64/camera/com.qti.chi.featurecompatibilityspecification.skyros.bin
+vendor/lib64/camera/com.qti.chi.featurecompatibilityspecification.sm7750.bin
+vendor/lib64/camera/com.qti.chi.featurecompatibilityspecification.sm8750.bin
 vendor/lib64/camera/com.qti.eeprom.gt24p128c2csli_imx766.so
 vendor/lib64/camera/com.qti.eeprom.irs2381c_polar.so
 vendor/lib64/camera/com.qti.eeprom.p24c256c_imx766.so
@@ -86,7 +67,10 @@ vendor/lib64/camera/com.qti.sensor.s5khp1s.so
 vendor/lib64/camera/com.qti.sensor.s5kjd1sp.so
 vendor/lib64/camera/com.qti.sensor.s5kjn5.so
 vendor/lib64/camera/com.qti.sensor.s5kjns_qtech_main.so
+vendor/lib64/camera/com.qti.sensor.sc820acs_ofilm_front.so
 vendor/lib64/camera/com.qti.sensormodule.s5kjns_qtech_main.bin
+vendor/lib64/camera/com.qti.sensormodule.sc820acs_ofilm_front.bin
+vendor/lib64/camera/com.qti.sensorsocmap.socid_map.bin
 vendor/lib64/camera/com.qti.tuned.default.canoe.bin
 vendor/lib64/camera/com.qti.tuned.molokai_default.bin
 vendor/lib64/camera/com.qti.tuned.molokai_qtech_imx766.bin
@@ -94,6 +78,7 @@ vendor/lib64/camera/com.qti.tuned.molokai_qtech_imx858.bin
 vendor/lib64/camera/com.qti.tuned.qtech_imx766.canoe.bin
 vendor/lib64/camera/com.qti.tuned.qtech_imx858.canoe.bin
 vendor/lib64/camera/com.qti.tuned.s5kjns_qtech_main.bin
+vendor/lib64/camera/com.qti.tuned.sc820acs_ofilm_front.bin
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
 vendor/lib64/camera/components/com.qti.hwcfg.bps.so
@@ -154,6 +139,7 @@ vendor/lib64/camera/components/libcamxdummysatsnapshotfusionwrapper.so
 vendor/lib64/camera/components/libcamxdummysatsoftwarefusionwrapper.so
 vendor/lib64/camera/components/libcamxdummysatwrapper.so
 vendor/lib64/camera/components/libcamxevainterface.so
+vendor/lib64/camera/fdconfigcpufd.bin
 vendor/lib64/com.qti.camx.chiiqutils.so
 vendor/lib64/com.qti.chifeaturecompatibility.so
 vendor/lib64/com.qti.chiusecaseselector.so
@@ -197,6 +183,7 @@ vendor/lib64/libcamxcslhw.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxhexlpservicebase.so
+vendor/lib64/libcamxhwlbpsdriver.so
 vendor/lib64/libcamxhwlfrontend.so
 vendor/lib64/libcamxhwlipedriver.so
 vendor/lib64/libcamximageformatutils.so
@@ -211,6 +198,9 @@ vendor/lib64/libcamxvppservicebase.so
 vendor/lib64/libchicore.so
 vendor/lib64/libchifeature2.so
 vendor/lib64/libchinodeevautils.so
+vendor/lib64/libipebpsstriping.so
+vendor/lib64/libipebpsstriping170.so
+vendor/lib64/libipebpsstriping480.so
 
 # Camera ABI
 vendor/lib64/camera/components/com.qti.node.customhwnode.so
@@ -256,9 +246,6 @@ vendor/lib64/libcamxsocketserverutil.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchinodehmeutils.so
 vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libipebpsstriping.so
-vendor/lib64/libipebpsstriping170.so
-vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libisphwsetting.so
 vendor/lib64/libmmcamera_cac.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
@@ -667,6 +654,29 @@ vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/peach_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/vendor_cmd.xml
 vendor/firmware/9_flicker_red.bin
+vendor/firmware/CAMERA_ICP.b00
+vendor/firmware/CAMERA_ICP.b01
+vendor/firmware/CAMERA_ICP.b02
+vendor/firmware/CAMERA_ICP.b04
+vendor/firmware/CAMERA_ICP.b08
+vendor/firmware/CAMERA_ICP.b09
+vendor/firmware/CAMERA_ICP.b17
+vendor/firmware/CAMERA_ICP.b18
+vendor/firmware/CAMERA_ICP.b20
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/CAMERA_ICP.mdt
+vendor/firmware/CAMERA_ICP_1.b00
+vendor/firmware/CAMERA_ICP_1.b01
+vendor/firmware/CAMERA_ICP_1.b02
+vendor/firmware/CAMERA_ICP_1.b03
+vendor/firmware/CAMERA_ICP_1.b04
+vendor/firmware/CAMERA_ICP_1.b08
+vendor/firmware/CAMERA_ICP_1.b09
+vendor/firmware/CAMERA_ICP_1.b17
+vendor/firmware/CAMERA_ICP_1.b18
+vendor/firmware/CAMERA_ICP_1.b20
+vendor/firmware/CAMERA_ICP_1.elf
+vendor/firmware/CAMERA_ICP_1.mdt
 vendor/lib/rfsa/adsp/libQnnHtpV81.so
 vendor/lib/rfsa/adsp/libQnnHtpV81Skel.so
 vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so
