@@ -9,6 +9,8 @@ DEVICE_PATH := $(LOCAL_PATH)
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8850/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8850/audio/pal
 
+LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/canoe/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/audio_effects.conf \
@@ -96,6 +98,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/Vendor_17ef_Product_622e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_622e.kl \
     $(LOCAL_PATH)/configs/keylayout/lenovo-stylus.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/lenovo-stylus.kl
 
+# Recovery touch
+PRODUCT_PACKAGES += \
+    libgdix_afe.recovery \
+    libgdix_tsa.recovery \
+    libgdix_tsc.recovery \
+    libgdix_tsd.recovery \
+    thpd-goodix-recovery
+
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_whale/android.hardware.sensor.accelerometer.xml \
@@ -147,9 +157,11 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    thpd \
-
-LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
+    libgdix_afe \
+    libgdix_tsa \
+    libgdix_tsc \
+    libgdix_tsd \
+    thpd
 
 PRODUCT_PACKAGES += TouchscreenRotationTarget
 
