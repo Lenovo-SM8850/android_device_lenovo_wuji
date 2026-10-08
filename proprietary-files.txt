@@ -25,6 +25,9 @@ vendor/lib64/rfs/dsp/libvpp_svc_skel.so
 # Audio effects
 vendor/lib64/soundfx/libquasar.so
 
+# GPU
+vendor/lib64/libhmegpu.bin
+
 # LED aw22xxx
 vendor/firmware/10_100_green.bin
 vendor/firmware/10_30_red.bin
@@ -480,6 +483,10 @@ vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
 
 # Platform runtime
 vendor/bin/hw/vendor.lenovo.hardware.touchscreen-service
+vendor/gpu/kbc/sequence_manifest.bin
+vendor/gpu/kbc/unified_kbcs_32.bin
+vendor/gpu/kbc/unified_kbcs_64.bin
+vendor/gpu/kbc/unified_ksqs.bin
 # Performance
 vendor/lib64/libsystem_health_mon2.so
 vendor/bin/oemowninfo
