@@ -1,0 +1,20 @@
+type lenovo_mcfg_coordinator, domain, coredomain;
+# System-UID app data and ART profile roots carry per-user MLS categories.
+typeattribute lenovo_mcfg_coordinator mlstrustedsubject;
+app_domain(lenovo_mcfg_coordinator)
+
+# Framework service access for the system-UID coordinator app.
+allow lenovo_mcfg_coordinator app_api_service:service_manager find;
+allow lenovo_mcfg_coordinator system_api_service:service_manager find;
+
+hal_client_domain(lenovo_mcfg_coordinator, hal_lenovo_mcfg)
+binder_use(lenovo_mcfg_coordinator)
+binder_call(lenovo_mcfg_coordinator, system_server)
+binder_call(lenovo_mcfg_coordinator, radio)
+get_prop(lenovo_mcfg_coordinator, radio_prop)
+allow lenovo_mcfg_coordinator { radio_service telecom_service notification_service activity_service }:service_manager find;
+allow lenovo_mcfg_coordinator system_app_data_file:dir create_dir_perms;
+allow lenovo_mcfg_coordinator system_app_data_file:file create_file_perms;
+
+# Framework startup and telephony listeners.
+allow lenovo_mcfg_coordinator { gpu_service netstats_service legacy_permission_service registry_service }:service_manager find;

@@ -1,0 +1,3 @@
+hal_attribute_service(hal_lenovo_mcfg, hal_lenovo_mcfg_service)
+binder_call(hal_lenovo_mcfg_client, hal_lenovo_mcfg_server)
+binder_call(hal_lenovo_mcfg_server, hal_lenovo_mcfg_client)

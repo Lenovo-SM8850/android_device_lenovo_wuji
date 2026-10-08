@@ -1,3 +1,4 @@
 # Presigned stock telephony packages use the QTI telephony client domain.
 user=_app isPrivApp=true name=org.codeaurora.ims domain=vendor_qtelephony type=app_data_file levelFrom=all
 user=_app isPrivApp=true name=com.qti.phone domain=vendor_qtelephony type=app_data_file levelFrom=all
+user=system seinfo=platform name=io.github.miner7222.mcfg isPrivApp=true domain=lenovo_mcfg_coordinator type=system_app_data_file

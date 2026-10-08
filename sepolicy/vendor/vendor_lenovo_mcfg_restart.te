@@ -1,0 +1,15 @@
+type vendor_lenovo_mcfg_restart, domain;
+type vendor_lenovo_mcfg_restart_exec, exec_type, vendor_file_type, file_type;
+type vendor_sysfs_mcfg_modem, fs_type, sysfs_type;
+init_daemon_domain(vendor_lenovo_mcfg_restart)
+
+# Scan class links and read all remoteproc attributes, including shared state labels.
+allow vendor_lenovo_mcfg_restart sysfs_type:dir search;
+allow vendor_lenovo_mcfg_restart { sysfs vendor_sysfs_ssr vendor_sysfs_mcfg_modem }:dir { getattr open read };
+allow vendor_lenovo_mcfg_restart sysfs_type:lnk_file { getattr read };
+allow vendor_lenovo_mcfg_restart { sysfs vendor_sysfs_ssr vendor_sysfs_rproc_state vendor_sysfs_mcfg_modem }:file { getattr open read };
+allow vendor_lenovo_mcfg_restart vendor_sysfs_mcfg_modem:file write;
+write_logd(vendor_lenovo_mcfg_restart)
+
+# No other subsystem's sysfs nodes can be changed by this helper.
+neverallow vendor_lenovo_mcfg_restart { sysfs_type -vendor_sysfs_mcfg_modem }:file { write append };

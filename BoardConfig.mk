@@ -28,5 +28,8 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 # Verified Boot
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 1788566400
 
+# VINTF
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vintf/framework_matrix_mcfg_loader.xml
+
 # Include the proprietary files BoardConfig.
 include vendor/lenovo/wuji/BoardConfigVendor.mk

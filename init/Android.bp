@@ -5,6 +5,14 @@
 // Device init
 
 prebuilt_etc {
+    name: "init.wuji.mcfg-loader.rc",
+    vendor: true,
+    src: "init.wuji.mcfg-loader.rc",
+    sub_dir: "init",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
     name: "init.wuji.rc",
     required: ["init.lenovo.rc"],
     src: "init.wuji.rc",
