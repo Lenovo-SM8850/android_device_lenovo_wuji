@@ -1,1 +1,2 @@
 type vendor_sysfs_goodix_fingerprint, fs_type, sysfs_type;
+type vendor_lenovo_mcfg_data_file, file_type, data_file_type;

@@ -1,0 +1,9 @@
+/vendor/bin/vendor\.lenovo\.mcfg-loader u:object_r:vendor_lenovo_mcfg_loader_exec:s0
+/data/vendor/mcfg-loader(/.*)? u:object_r:vendor_lenovo_mcfg_data_file:s0
+ifelse(target_build_variant, `user', `
+/vendor/bin/diag-router u:object_r:vendor_lenovo_diag_router_exec:s0
+')
+
+/vendor/bin/vendor\.lenovo\.mcfg-restart u:object_r:vendor_lenovo_mcfg_restart_exec:s0
+# Keep the modem label when userspace restores the Qualcomm sysfs contexts.
+/sys/devices/platform/soc/4080000\.remoteproc-mss/remoteproc/remoteproc[0-9]+/state u:object_r:vendor_sysfs_mcfg_modem:s0

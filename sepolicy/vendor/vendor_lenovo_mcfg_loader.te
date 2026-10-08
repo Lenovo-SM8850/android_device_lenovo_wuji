@@ -1,0 +1,33 @@
+type vendor_lenovo_mcfg_loader, domain;
+type vendor_lenovo_mcfg_loader_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_lenovo_mcfg_loader)
+# HAL servers cannot exec without a domain transition. The private worker owns
+# only its inherited pipes and diag socket, with no Binder, journal or restart access.
+type vendor_lenovo_mcfg_diag, domain;
+domain_auto_trans(vendor_lenovo_mcfg_loader, vendor_lenovo_mcfg_loader_exec, vendor_lenovo_mcfg_diag)
+allow vendor_lenovo_mcfg_loader vendor_lenovo_mcfg_diag:process sigkill;
+allow vendor_lenovo_mcfg_diag vendor_lenovo_mcfg_loader:fd use;
+allow vendor_lenovo_mcfg_diag vendor_lenovo_mcfg_loader:fifo_file { getattr read write };
+allow vendor_lenovo_mcfg_diag self:unix_stream_socket create_stream_socket_perms;
+userdebug_or_eng(`allow vendor_lenovo_mcfg_diag vendor_diag-router:unix_stream_socket connectto;')
+ifelse(target_build_variant, `user', `
+allow vendor_lenovo_mcfg_diag vendor_lenovo_diag_router:unix_stream_socket connectto;
+')
+hal_server_domain(vendor_lenovo_mcfg_loader, hal_lenovo_mcfg)
+binder_use(vendor_lenovo_mcfg_loader)
+allow vendor_lenovo_mcfg_loader vendor_lenovo_mcfg_data_file:dir create_dir_perms;
+allow vendor_lenovo_mcfg_loader vendor_lenovo_mcfg_data_file:file create_file_perms;
+allow vendor_lenovo_mcfg_loader self:unix_stream_socket create_stream_socket_perms;
+allow vendor_lenovo_mcfg_loader selinuxfs:file { getattr open read };
+# Authenticated imports arrive as a bounded private coordinator staging file.
+allow vendor_lenovo_mcfg_loader hal_lenovo_mcfg_client:fd use;
+allow vendor_lenovo_mcfg_loader system_app_data_file:file { getattr read };
+userdebug_or_eng(`allow vendor_lenovo_mcfg_loader vendor_diag-router:unix_stream_socket connectto;')
+ifelse(target_build_variant, `user', `
+allow vendor_lenovo_mcfg_loader vendor_lenovo_diag_router:unix_stream_socket connectto;
+')
+neverallow vendor_lenovo_mcfg_loader { sysfs_type }:file write;
+neverallow vendor_lenovo_mcfg_loader { functionfs }:file write;
+
+# Claiming a durable restart token requests the restricted init helper.
+set_prop(vendor_lenovo_mcfg_loader, vendor_lenovo_mcfg_restart_prop)
