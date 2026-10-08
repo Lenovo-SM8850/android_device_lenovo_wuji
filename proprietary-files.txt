@@ -275,10 +275,6 @@ vendor/lib64/libhwliqinterface2.so
 vendor/lib64/libqfdservice.so
 vendor/lib64/libsiminputgenutil.so
 
-# Display (HDR)
-vendor/lib64/libhdrdynamic.so
-vendor/lib64/libhdrdynamicootf.so
-
 # Display calibration
 vendor/etc/display/qdcm_calib_data_nt37801_amoled_cmd_mode_dsi_csot_panel_with_DSC.json
 vendor/etc/display/qdcm_calib_data_nt37801_amoled_cmd_mode_dsi_csot_panel_with_DSC_CPHY.json
@@ -338,9 +334,6 @@ vendor/etc/media_codecs_performance_canoe_v1_vendor.xml
 vendor/etc/media_codecs_performance_canoe_v2.xml
 vendor/etc/media_codecs_performance_canoe_v2_vendor.xml
 
-# Media SV DSP
-vendor/lib64/libsvswcpu.so
-
 # Modem / Radio / QMI
 vendor/bin/qcc-vendor
 vendor/etc/modem_configs.xml
@@ -356,7 +349,6 @@ vendor/firmware/vpu40_2v_unsigned.mbn
 vendor/firmware/vpu40_2v_v1.mbn
 vendor/firmware/vpu40_2v_v1_unsigned.mbn
 vendor/lib64/lib-imsdcservice.so
-vendor/lib64/vendor.qti.qccvndhal_aidl-V2-ndk.so
 
 # Platform configuration
 vendor/etc/backend_conf.xml
@@ -370,7 +362,6 @@ vendor/lib64/libqfdadapter.so
 vendor/lib64/libqll.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqsegnet.so
-vendor/lib64/libtflite_fd.so
 
 # Sensors
 vendor/lib64/libQshSession.so
