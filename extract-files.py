@@ -69,7 +69,7 @@ blob_fixups: blob_fixups_user_type = {
 
 
 module = ExtractUtilsModule(
-    'baldur',
+    'wuji',
     'lenovo',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -81,13 +81,19 @@ shared_module = ExtractUtils.get_module('sm8850-common', module.vendor)
 module.blob_fixups = {**shared_module.blob_fixups, **module.blob_fixups}
 module.lib_fixups = {**shared_module.lib_fixups, **module.lib_fixups}
 
+def write_shared_identical_packages(ctx, packages_ctx):
+    shared_module.write_shared_packages(ctx, packages_ctx,
+        module.device_path + '/shared-identical-packages.txt', 'abi-v2')
+
+for proprietary_file in module.proprietary_files:
+    proprietary_file.add_post_makefile_generation_fn(write_shared_identical_packages)
+
 def write_shared_buildid_packages(ctx, packages_ctx):
     shared_module.write_shared_packages(ctx, packages_ctx,
-        module.device_path + '/shared-buildid-packages.txt', 'abi-v1')
+        module.device_path + '/shared-buildid-packages.txt', 'abi-v2')
 
 for proprietary_file in module.proprietary_files:
     proprietary_file.add_post_makefile_generation_fn(write_shared_buildid_packages)
-
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(module, 'sm8850-common', module.vendor)

@@ -36,9 +36,3 @@ prebuilt_etc {
     device_specific: true,
 }
 
-prebuilt_etc {
-    name: "init.lenovo.lcd.rc",
-    src: "init.lenovo.lcd.rc",
-    sub_dir: "init",
-    vendor: true,
-}
