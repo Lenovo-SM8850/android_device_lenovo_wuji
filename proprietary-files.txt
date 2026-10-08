@@ -334,7 +334,7 @@ vendor/lib64/libspuprovisionids.so
 vendor/lib64/libtee_provisioner_qti.so
 
 # GPU
-vendor/etc/permissions/android.software.vulkan.deqp.level.xml
+vendor/lib64/libhmegpu.bin
 
 # Init
 vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
@@ -513,6 +513,10 @@ vendor/bin/qms
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/bin/start_subsys.sh
+vendor/gpu/kbc/sequence_manifest.bin
+vendor/gpu/kbc/unified_kbcs_32.bin
+vendor/gpu/kbc/unified_kbcs_64.bin
+vendor/gpu/kbc/unified_ksqs.bin
 vendor/lib/cpufd_v1_2_0_32.bin
 vendor/lib64/cellularSecurityModule.so
 vendor/lib64/cpufd_v1_2_0.bin
@@ -592,7 +596,6 @@ vendor/etc/thermal-engine_cpu_3.conf
 vendor/etc/thermal-engine_cpu_4.conf
 vendor/etc/thermal-engine_cpu_5.conf
 vendor/etc/thermal-engine_cpu_7.conf
-vendor/etc/thermal-engine_gpu_2.conf
 vendor/etc/thermal_user_case.conf
 
 # Vendor
@@ -646,6 +649,7 @@ vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:vendor/etc/init/vendor.q
 vendor/etc/init/vendor.qti.qspmhal-service.rc
 vendor/etc/init/yepdiag.rc
 vendor/etc/mmi/layout/main.xml
+vendor/etc/permissions/android.software.vulkan.deqp.level.xml
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/qcvm_config.json
@@ -658,6 +662,7 @@ vendor/etc/seccomp_policy/hexlp.policy
 vendor/etc/seccomp_policy/qspm.policy
 vendor/etc/seccomp_policy/qwesd@2.0.policy
 vendor/etc/ssg/ta_config.json
+vendor/etc/thermal-engine_gpu_2.conf
 vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/peach_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/vendor_cmd.xml
