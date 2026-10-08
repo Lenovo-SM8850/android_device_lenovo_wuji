@@ -1,0 +1,10 @@
+<!--
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="9.0" type="device" target-level="202504">
+    <hal format="aidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>3</version>
+        <fqname>IFingerprint/default</fqname>
+    </hal>
+</manifest>

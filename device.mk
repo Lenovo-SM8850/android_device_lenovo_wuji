@@ -98,6 +98,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/Vendor_17ef_Product_622e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_622e.kl \
     $(LOCAL_PATH)/configs/keylayout/lenovo-stylus.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/lenovo-stylus.kl
 
+# Permission XMLs
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
 # Recovery touch
 PRODUCT_PACKAGES += \
     libgdix_afe.recovery \
@@ -164,6 +168,9 @@ PRODUCT_PACKAGES += \
     thpd
 
 PRODUCT_PACKAGES += TouchscreenRotationTarget
+
+# VINTF
+DEVICE_MANIFEST_FILE += device/lenovo/wuji/vintf/manifest_canoe.xml
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/lenovo/sm8850-common/common.mk)
