@@ -87,7 +87,9 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworksResOverlayWuji \
     FrameworksResTargetWuji \
+    SystemUIResOverlayWuji \
     TelephonyResOverlayWuji
 
 # Pen
