@@ -6,6 +6,7 @@
     "Video": {
     // feature list used for enable/disable
         "Features": {
+            "standalone_filters": true,
             // This is used for encoder color space conversion with custom matrix.
             // custom matrix is defined in kernel driver
             // this triggers to enable CSC to 709LR with custom matrix
@@ -127,6 +128,7 @@
 
         // list of codec plugin libraries to be loaded into codec registry
         "QC2CodecPlugins": [
+            "libqc2vppfilter.so",
             "libqcodec2_imgtxrfilter.so"
             //"libqcodec2_dolbymdgenfilter.so"
         ],
