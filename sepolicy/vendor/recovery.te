@@ -1,0 +1,13 @@
+recovery_only(`
+    allow recovery thp_device:chr_file { getattr open read write ioctl map };
+    allowxperm recovery thp_device:chr_file ioctl { 0xb801-0xb812 0xb814 };
+    allow recovery input_agent_device:chr_file { getattr open read write ioctl };
+    allowxperm recovery input_agent_device:chr_file ioctl { 0xb901-0xb906 };
+
+    allow recovery self:netlink_generic_socket { create getattr bind read write };
+    allow recovery self:capability sys_nice;
+    allow recovery vendor_sysfs_battery_supply:file { getattr open read };
+    allow recovery vendor_sysfs_graphics:dir search;
+    allow recovery vendor_sysfs_graphics:file { getattr open read };
+    allow recovery vendor_sysfs_thp_screen_state:file { getattr open write };
+')

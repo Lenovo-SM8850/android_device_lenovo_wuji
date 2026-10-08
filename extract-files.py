@@ -19,6 +19,8 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
+from extract_utils.bp_builder import BpBuilder
+from extract_utils.bp_encoder import BpJSONEncoder
 
 namespace_imports = [
     'hardware/lenovo',
@@ -100,6 +102,26 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 
+def write_recovery_touch_modules(ctx, packages_ctx):
+    for component in ('tsc', 'afe', 'tsa', 'tsd'):
+        library = f'libgdix_{component}'
+        shared_libs = ['liblog', 'libc', 'libm']
+        if component != 'afe':
+            shared_libs.append('libdl')
+        builder = BpBuilder(BpJSONEncoder(legacy=ctx.legacy)).set_rule_name('cc_prebuilt_library_shared')
+        builder.o = {
+            'name': f'{library}_wuji_recovery',
+            'stem': library,
+            'recovery': True,
+            'compile_multilib': '64',
+            'srcs': [f'{packages_ctx.vendor_prop_rel_sub_path}/vendor/lib64/{library}.so'],
+            'shared_libs': shared_libs,
+            'stl': 'none',
+            'strip': {'none': True},
+        }
+        builder.write(ctx.bp_out)
+
+
 module = ExtractUtilsModule(
     'wuji',
     'lenovo',
@@ -109,6 +131,8 @@ module = ExtractUtilsModule(
 )
 
 
+for proprietary_file in module.proprietary_files:
+    proprietary_file.add_post_makefile_generation_fn(write_recovery_touch_modules)
 shared_module = ExtractUtils.get_module('sm8850-common', module.vendor)
 module.blob_fixups = {**shared_module.blob_fixups, **module.blob_fixups}
 module.lib_fixups = {**shared_module.lib_fixups, **module.lib_fixups}
