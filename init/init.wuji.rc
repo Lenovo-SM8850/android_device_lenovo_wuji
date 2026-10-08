@@ -36,7 +36,13 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 2112000
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 2880000
 
+on charger
+    # Leave power-off charging patterns to the stock battery rc.
+    stop vendor.light-default
+
 on boot
+    # Android owns the ring; charge-only cfg writes are limited to charger mode.
+    setprop vendor.lenovo.battery.charge_only_mode 0
 
 
 
