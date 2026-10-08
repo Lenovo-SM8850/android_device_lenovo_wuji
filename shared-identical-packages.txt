@@ -1,4 +1,10 @@
 # Shared ABI packages
 
 vendor/bin/fm_qsoc_patches
+vendor/bin/ims-dataservice-daemon
+vendor/bin/imsdaemon
+vendor/bin/vendor.dpmd
 vendor/lib64/libwms.so
+vendor/lib64/vendor.libdpmfdmgr.so
+vendor/lib64/vendor.libdpmtcm.so
+vendor/lib64/vendor.libmwqemiptablemgr.so
