@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += ueventd.wuji.rc
 PRODUCT_PACKAGES += \
     init.wuji.rc
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResTargetWuji
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
