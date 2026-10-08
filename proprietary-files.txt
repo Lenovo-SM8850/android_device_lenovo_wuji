@@ -553,6 +553,7 @@ vendor/lib64/libspukeymintutils.so
 vendor/lib64/vendor.qti.hardware.qteeconnector-V1-ndk.so
 
 # Sensors config
+vendor/etc/sensors/config/alana_fcal_mmc56x3x_0.json
 vendor/etc/sensors/config/json.lst
 vendor/etc/sensors/config/kaanapali_aw963xx_0.json
 vendor/etc/sensors/config/kaanapali_aw963xx_0_sar_register.json
@@ -560,13 +561,16 @@ vendor/etc/sensors/config/kaanapali_bu52053nvx_0.json
 vendor/etc/sensors/config/kaanapali_fcal_mmc56x3x_0.json
 vendor/etc/sensors/config/kaanapali_icm536xx_0.json
 vendor/etc/sensors/config/kaanapali_lsm6dsv_0.json
+vendor/etc/sensors/config/kaanapali_lsm6dsv_1.json
 vendor/etc/sensors/config/kaanapali_mmc56x3x_0.json
+vendor/etc/sensors/config/kaanapali_mtp_mmc56x3x_0.json
 vendor/etc/sensors/config/kaanapali_qmc630x_0.json
-vendor/etc/sensors/config/kaanapali_stk3acx_0.json
+vendor/etc/sensors/config/kaanapali_stk3a5x_0.json
 vendor/etc/sensors/config/molokai_fcal_mmc56x3x_0.json
+vendor/etc/sensors/config/molokai_mtp_mmc56x3x_0.json
 vendor/etc/sensors/config/molokai_tmd3765_0.json
 vendor/etc/sensors/config/sns_diag_filter.json
-vendor/etc/sensors/javalibs/odpmanagerlib-aar
+vendor/etc/sensors/javalibs/odpmanagerlib.jar
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
@@ -601,6 +605,8 @@ vendor/etc/thermal-engine_cpu_1.conf
 vendor/etc/thermal-engine_cpu_2.conf
 vendor/etc/thermal-engine_cpu_3.conf
 vendor/etc/thermal-engine_cpu_4.conf
+vendor/etc/thermal-engine_cpu_6.conf
+vendor/etc/thermal-engine_cpu_9.conf
 vendor/etc/thermal_user_case.conf
 
 # Touchscreen firmware
