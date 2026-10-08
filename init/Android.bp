@@ -5,9 +5,9 @@
 // Device init
 
 prebuilt_etc {
-    name: "init.lenovo.baldur.rc",
+    name: "init.lenovo.wuji.rc",
     required: ["init.lenovo.common.rc"],
-    src: "init.lenovo.baldur.rc",
+    src: "init.lenovo.wuji.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -35,4 +35,3 @@ prebuilt_etc {
     required: ["ueventd.lenovo.common.rc"],
     device_specific: true,
 }
-

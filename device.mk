@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += ueventd.lenovo.rc
 
 PRODUCT_PACKAGES += \
-    init.lenovo.baldur.rc
+    init.lenovo.wuji.rc
 
 # Display
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
