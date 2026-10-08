@@ -4,8 +4,8 @@
 -->
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">170</item>
-    <item name="screen.full">569</item>
+    <item name="screen.on">244.93</item>
+    <item name="screen.full">2320.41</item>
     <array name="cpu.clusters.cores">
         <value>6</value>
         <value>2</value>
@@ -98,8 +98,6 @@
         <value>4262400</value>
         <value>4339200</value>
         <value>4396800</value>
-        <value>4512000</value>
-        <value>4608000</value>
     </array>
     <array name="cpu.core_power.cluster1">
         <value>44</value>
@@ -129,26 +127,24 @@
         <value>515</value>
         <value>570</value>
         <value>598</value>
-        <value>623</value>
-        <value>690</value>
     </array>
-    <item name="cpu.active">32.56</item>
-    <item name="cpu.idle">9.76</item>
+    <item name="cpu.active">17.81</item>
+    <item name="cpu.idle">7.82</item>
     <item name="cpu.suspend">0</item>
-    <item name="battery.capacity">9000</item>
-    <item name="wifi.on">1.41</item>
+    <item name="battery.capacity">7470</item>
+    <item name="wifi.on">0.86</item>
     <item name="wifi.active">168.62</item>
-    <item name="wifi.scan">91.22</item>
-    <item name="dsp.audio">49.99</item>
-    <item name="dsp.video">163.57</item>
-    <item name="camera.flashlight">244</item>
-    <item name="camera.avg">469.24</item>
+    <item name="wifi.scan">46.32</item>
+    <item name="dsp.audio">39.05</item>
+    <item name="dsp.video">41.44</item>
+    <item name="camera.flashlight">394.79</item>
+    <item name="camera.avg">903.24</item>
     <item name="gps.on">13.58</item>
-    <item name="radio.active">356.18</item>
-    <item name="radio.scanning">5.5</item>
+    <item name="radio.active">259.95</item>
+    <item name="radio.scanning">153.17</item>
     <array name="radio.on">
-        <value>86</value>
-        <value>8</value>
+        <value>2.9</value>
+        <value>3</value>
     </array>
     <item name="modem.controller.idle">6</item>
     <item name="modem.controller.rx">180</item>
@@ -170,6 +166,6 @@
         <value>1</value>
     </array>
     <item name="bluetooth.active">19.85</item>
-    <item name="bluetooth.on">1.06</item>
+    <item name="bluetooth.on">0.7</item>
     <item name="bluetooth.controller.voltage">3700</item>
 </device>

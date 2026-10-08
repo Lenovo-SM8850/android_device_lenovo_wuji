@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>10</item>
+        <item>10</item>
+        <item>40</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>360</item>
+        <item>420</item>
+        <item>480</item>
+        <item>540</item>
+        <item>600</item>
+        <item>800</item>
+        <item>1410.72</item>
+    </array>
+    <integer-array name="config_autoBrightnessLevels">
+        <item>10</item>
+        <item>40</item>
+        <item>150</item>
+        <item>450</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>9999</item>
+        <item>10000</item>
+    </integer-array>
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>0</item>
+        <item>3</item>
+        <item>11</item>
+        <item>28</item>
+        <item>45</item>
+        <item>61</item>
+        <item>86</item>
+        <item>103</item>
+        <item>120</item>
+        <item>137</item>
+        <item>155</item>
+        <item>172</item>
+        <item>229</item>
+        <item>255</item>
+    </integer-array>
+    <array name="config_screenBrightnessNits">
+        <item>0</item>
+        <item>10</item>
+        <item>40</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>360</item>
+        <item>420</item>
+        <item>480</item>
+        <item>540</item>
+        <item>600</item>
+        <item>800</item>
+        <item>1410.72</item>
+    </array>
+
+
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.2</item>
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.00024</item>
+
+    <!-- Keep status bar content clear of the rounded corners. -->
+
+    <dimen name="status_bar_height_default">24dp</dimen>
+    <dimen name="status_bar_height_portrait">24dp</dimen>
+    <dimen name="status_bar_height_landscape">24dp</dimen>
+
+    <integer name="config_colorFadeOffDurations">250</integer>
+    <integer name="config_nightDisplayColorTemperatureMax">6480</integer>
+    <integer name="config_screenBrightnessSettingDefault">51</integer>
+
+
+
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.06667</item>
+
+    <!-- Display cutout -->
+    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">M 15,24 A 15,15 0 1,1 -15,24 A 15,15 0 1,1 15,24 Z @dp</string>
+</resources>

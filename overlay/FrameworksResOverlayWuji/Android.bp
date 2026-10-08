@@ -3,6 +3,6 @@
 //
 
 runtime_resource_overlay {
-    name: "FrameworksResOverlayBaldur",
+    name: "FrameworksResOverlayWuji",
     product_specific: true,
 }
