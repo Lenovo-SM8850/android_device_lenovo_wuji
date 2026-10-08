@@ -18,9 +18,6 @@ vendor.display.use_smooth_motion=0
 # Security / DRM / TEE
 vendor.wv.oemcrypto.debug.enable_prov40=true
 
-# Performance / power / sensors / daemons
-persist.vendor.qfp=true
-
 # Additional hardware properties
 vendor.display.lcd_density=440
 vendor.display.svi_threshold_nits=500
