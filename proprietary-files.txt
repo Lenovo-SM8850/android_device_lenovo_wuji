@@ -324,10 +324,20 @@ vendor/firmware/arcface_ta.mdt
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.gfcap
-# Firmware / Security
-vendor/bin/hw/android.hardware.security.onekeymint-service-qti
 vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-gfcap.rc
 vendor/etc/vintf/manifest/fingerprint-default.xml:vendor/etc/vintf/manifest/fingerprint-gfcap.xml
+vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
+vendor/lib64/libgoodixfingerprint.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.cap.so
+
+# Firmware / Security
+vendor/bin/activespu
+vendor/bin/hw/android.hardware.gatekeeper-rust-service-qti
+vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
+vendor/etc/vintf/manifest/android.hardware.secure_element.xml
+vendor/firmware/HYNIX_A003_3Dv9_UFS_4_1.bin
+vendor/firmware/SAVONA_V8_TLC_1Tb_UFS41_GENERAL_P20_FW00.bin
+vendor/firmware/SAVONA_V8_TLC_512Gb_UFS41_GENERAL_P20_FW00.bin
 vendor/firmware/evass.b00
 vendor/firmware/evass.b01
 vendor/firmware/evass.b02
@@ -336,14 +346,12 @@ vendor/firmware/evass.b08
 vendor/firmware/evass.b09
 vendor/firmware/evass.b19
 vendor/firmware/evass.mdt
-vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
+vendor/firmware/ffu_config.txt
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
-vendor/lib64/libgoodixfingerprint.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libspuprovisionids.so
 vendor/lib64/libtee_provisioner_qti.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.cap.so
 
 # GPU
 vendor/lib64/libhmegpu.bin
@@ -636,6 +644,7 @@ vendor/bin/hexlpservice
 vendor/bin/hlosminkdaemon
 vendor/bin/hw/android.hardware.bluetooth@aidl-service-qti
 vendor/bin/hw/android.hardware.powerstats-service.qti
+vendor/bin/hw/android.hardware.security.onekeymint-service-qti
 vendor/bin/hw/vendor.lenovo.hardware.vibrator_dual-service
 vendor/bin/hw/vendor.qti.MemHal-service
 vendor/bin/hw/vendor.qti.hardware.vibrator.service:vendor/bin/hw/vendor.qti.hardware.vibrator.service-lenovo
