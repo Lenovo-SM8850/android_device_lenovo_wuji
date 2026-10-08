@@ -1,4 +1,3 @@
-/data/vendor/arcsoft(/.*)? u:object_r:vendor_arcsoft_data_file:s0
 /vendor/bin/vendor\.lenovo\.mcfg-loader u:object_r:vendor_lenovo_mcfg_loader_exec:s0
 /data/vendor/mcfg-loader(/.*)? u:object_r:vendor_lenovo_mcfg_data_file:s0
 /vendor/bin/check_attest_keybox u:object_r:vendor_init-qti-keymaster-sh_exec:s0

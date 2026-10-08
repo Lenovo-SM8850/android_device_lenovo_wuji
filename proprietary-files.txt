@@ -367,18 +367,6 @@ system/lib64/libdolbyproxyandroid.so;MODULE_SUFFIX=-system
 vendor/lib/rfsa/adsp/capi_dofg_nn.so.1
 vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
 
-# Face unlock
-vendor/bin/hw/android.hardware.biometrics.face@4.0-service.face
-vendor/firmware/arcface_ta.b00
-vendor/firmware/arcface_ta.b01
-vendor/firmware/arcface_ta.b03
-vendor/firmware/arcface_ta.b04
-vendor/firmware/arcface_ta.b05
-vendor/firmware/arcface_ta.b06
-vendor/firmware/arcface_ta.b07
-vendor/firmware/arcface_ta.b08
-vendor/firmware/arcface_ta.mdt
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.gfcap
 vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-gfcap.rc

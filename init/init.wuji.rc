@@ -43,10 +43,6 @@ on post-fs-data
     chmod 0220 /sys/bus/platform/devices/gt9976n_thp.0/gesture_enable
     chmod 0660 /sys/bus/platform/devices/gt9976n_thp.0/esd_info
 
-    # ArcSoft storage
-    mkdir /data/vendor/arcsoft 0777 system system
-    restorecon_recursive /data/vendor/arcsoft
-
 on charger
     # Leave power-off charging patterns to the stock battery rc.
     stop vendor.light-default
