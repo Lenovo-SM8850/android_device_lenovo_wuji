@@ -60,6 +60,7 @@ PRODUCT_COPY_FILES += \
 
 # Carrier settings
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayWuji \
     LenovoMcfgLoader \
     privapp-permissions-io.github.miner7222.mcfg \
     init.lenovo.mcfg-loader.rc \
