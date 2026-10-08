@@ -1,1 +1,0 @@
-allow hal_audio_default vendor_sysfs_spk_id_level:file { read write open };

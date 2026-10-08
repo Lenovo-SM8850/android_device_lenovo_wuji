@@ -41,6 +41,7 @@
         <param key="max_sessions" value="128"/>
         <param key="max_nonTunnel_sessions" value="4"/>
         <param key="connectivity_proxy_enabled" value ="true" />
+        <param key="spatialaudio_headtracking_enabled" value ="false" />
         <param key="logging_level" value ="3" />
         <param key="context_manager_enable" value ="true" />
         <param key="lpi_logging_enable" value ="false" />
@@ -173,8 +174,8 @@
         <in-device>
             <id>PAL_DEVICE_IN_HANDSET_MIC</id>
             <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-3</back_end_name>
-            <max_channels>2</max_channels>
-            <channels>2</channels>
+            <max_channels>4</max_channels>
+            <channels>1</channels>
             <samplerate>48000</samplerate>
             <snd_device_name>handset-mic</snd_device_name>
             <ec_enable>0</ec_enable>
@@ -245,7 +246,7 @@
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>1</priority>
-                <sidetone_mode>SW</sidetone_mode>
+                <sidetone_mode>HW</sidetone_mode>
                 <bit_width>16</bit_width>
                 <ec_enable>1</ec_enable>
                 <custom-config key="nn-sm">
@@ -312,9 +313,9 @@
         <in-device>
             <id>PAL_DEVICE_IN_SPEAKER_MIC</id>
             <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-3</back_end_name>
-            <max_channels>2</max_channels>
+            <max_channels>4</max_channels>
             <samplerate>48000</samplerate>
-            <channels>2</channels>
+            <channels>1</channels>
             <ec_enable>0</ec_enable>
             <snd_device_name>speaker-mic</snd_device_name>
             <usecase>
@@ -434,7 +435,7 @@
         <in-device>
             <id>PAL_DEVICE_IN_WIRED_HEADSET</id>
             <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-3</back_end_name>
-            <max_channels>2</max_channels>
+            <max_channels>1</max_channels>
             <channels>1</channels>
             <snd_device_name>headset-mic</snd_device_name>
             <ec_enable>0</ec_enable>
@@ -444,10 +445,6 @@
             <usecase>
                 <name>PAL_STREAM_DEEP_BUFFER</name>
                 <ec_enable>1</ec_enable>
-                <custom-config key="headset-single-amic-dual-adc-hdr">
-                    <channels>2</channels>
-                    <snd_device_name>headset-single-amic-dual-adc-hdr</snd_device_name>
-                </custom-config>
             </usecase>
         <!--Uncomment these lines instead of above lines if needing to enable EC per custom key
             <usecase>
@@ -460,10 +457,6 @@
             <usecase>
                 <name>PAL_STREAM_COMPRESSED</name>
                 <ec_enable>1</ec_enable>
-                <custom-config key="headset-single-amic-dual-adc-hdr">
-                    <channels>2</channels>
-                    <snd_device_name>headset-single-amic-dual-adc-hdr</snd_device_name>
-                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
@@ -639,10 +632,10 @@
         </in-device>
         <in-device>
             <id>PAL_DEVICE_IN_VI_FEEDBACK</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-TX-3</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-TX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
-            <samplerate>48000</samplerate>
+            <samplerate>8000</samplerate>
             <bit_width>32</bit_width>
             <snd_device_name>vi-feedback</snd_device_name>
             <usecase>
@@ -789,7 +782,7 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_NONE</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-3</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <snd_device_name>none</snd_device_name>
@@ -798,11 +791,10 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_SPEAKER</id>
-            <back_end_name>MI2S-LPAIF-RX-PRIMARY</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
             <samplerate>48000</samplerate>
-            <bit_width>32</bit_width>
             <snd_device_name>speaker</snd_device_name>
             <speaker_protection_enabled>1</speaker_protection_enabled>
             <fractional_sr>0</fractional_sr>
@@ -814,13 +806,14 @@
                         Pandeiro     : 3
                         Pandeiro I2S : 4
             -->
-            <wsa_used>3</wsa_used>
+            <wsa_used>2</wsa_used>
+            <sp_op_mode>5</sp_op_mode>
             <!-- Flag to specify cps mode which is applicable
                  Values: disable CPS: 0
                          CPS streaming: 1
                          ADSP control mode: 2
             -->
-            <cps_mode>2</cps_mode>
+            <cps_mode>1</cps_mode>
             <vbat_enabled>1</vbat_enabled>
             <!--Specify the supported bit format on speaker end point -->
             <!--This should be in the form of pal_audio_fmt_id-->
@@ -867,7 +860,7 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_HANDSET</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-2</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
@@ -1159,7 +1152,7 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_ULTRASOUND</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-3</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-1</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <snd_device_name>ultrasound-handset-wsa</snd_device_name>
@@ -1181,7 +1174,7 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_ULTRASOUND_DEDICATED</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-3</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <snd_device_name>handset-wsa</snd_device_name>
@@ -1757,6 +1750,22 @@
                 </operating_modes>
                 <sound_model_info>
                     <sound_model>
+                        <name>ACD_SOUND_MODEL_ID_ENVIRONMENT</name>
+                        <bin>environment.eai</bin>
+                        <uuid>0x0B001006</uuid>
+                        <contexts>
+                            <context id="0x08001324" /> <!-- ENV_HOME -->
+                            <context id="0x08001325" /> <!-- ENV_OFFICE -->
+                            <context id="0x08001326" /> <!-- ENV_RESTAURANT -->
+                            <context id="0x08001327" /> <!-- ENV_INDOOR -->
+                            <context id="0x08001328" /> <!-- ENV_INSTREET -->
+                            <context id="0x08001329" /> <!-- ENV_OUTDOOR -->
+                            <context id="0x0800132A" /> <!-- ENV_INCAR -->
+                            <context id="0x0800132B" /> <!-- ENV_INTRAIN -->
+                            <context id="0x0800132C" /> <!-- ENV_UNKNOWN -->
+                        </contexts>
+                    </sound_model>
+                    <sound_model>
                         <name>ACD_SOUND_MODEL_ID_EVENT</name>
                         <bin>event.eai</bin>
                         <uuid>0x0B001007</uuid>
@@ -1862,6 +1871,8 @@
                 <param asr_input_buffer_size_partial_mode="200" />
                 <!-- ASR output buffer size in bytes for continuous buffering mode -->
                 <param buffering_mode_out_buf_size="102400" />
+                <!-- Partial mode runs in NLPI by default, set this flag to run it in LPI -->
+                <param partial_mode_in_lpi="true"/>
                 <!-- Output buffer size for speaker diarization in bytes -->
                 <param sdz_output_buffer_size="102400" />
             </common_config>
@@ -1906,7 +1917,7 @@
                 <param enable_inter_va_engine_concurrent_detection="true" />
             </config>
             <!-- Multiple stream_config tags can be listed, each with unique -->
-            <!-- vendor_uuid. The below tag represents QC Voice UI sound model -->
+            <!-- Vendor_uuid. The below tag represents QC Voice UI sound model -->
             <!-- Configuration. ISV must use their own unique vendor_uuid. -->
             <stream_config>
                 <name>QC_VOICE_UI</name>
@@ -2117,7 +2128,7 @@
                 <!-- NOTE: HIST_CAP usecase is typically running with ASR concurrency -->
                 <!-- Supposed to use same capture profile as ASR due to shared dam and device pp -->
                 <operating_modes>
-                    <low_power capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_LPI_AAD" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_LPI" />
+                    <low_power capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_LPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_LPI" />
                     <high_performance capture_profile_handset="DUAL_MIC_48KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_48KHZ_16BIT_HEADSET_FFECNS" />
                     <high_performance_and_charging capture_profile_handset="DUAL_MIC_48KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_48KHZ_16BIT_HEADSET_FFECNS" />
                 </operating_modes>
