@@ -66,6 +66,11 @@ blob_fixups: blob_fixups_user_type = {
                        '    interface aidl vendor.goodix.hardware.biometrics.fingerprint.cap.IGoodixFingerprintDaemon/default\n')
         .regex_replace('0777', '0660')
         .regex_replace('on property:sys.boot_completed=1\n    start vendor.fingerprint-gf\n', ''),
+    # The stock chmod +rw (0666 in init's mode grammar -> 07777 after the
+    # /dev/thp, /dev/input_agent nodes are created) overrides the 0660 set by
+    # hardware/lenovo/touch/thp/thpd.rc.  Drop the stock lines so our 0660 stays.
+    'vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc': blob_fixup()
+        .regex_replace('    chmod \\+rw /dev/(?:input_agent|thp)\\n', ''),
     (
         'vendor/etc/media_codecs_canoe_v2_vendor.xml',
         'vendor/etc/media_codecs_performance_canoe_sku1_vendor.xml',

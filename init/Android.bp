@@ -12,11 +12,20 @@ prebuilt_etc {
     vendor: true,
 }
 
+// Device fstab.
 prebuilt_etc {
     name: "fstab.qcom",
     src: "fstab.qcom",
     vendor: true,
     vendor_ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "init.wuji.pen.rc",
+    vendor: true,
+    src: "init.wuji.pen.rc",
+    sub_dir: "init",
+    filename_from_src: true,
 }
 
 prebuilt_etc {

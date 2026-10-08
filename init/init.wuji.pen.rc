@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: Apache-2.0
+
+on post-fs-data
+    chown system system /proc/pen_type
+    chmod 0660 /proc/pen_type
+    chown system system /proc/HighReportRate
+    chmod 0660 /proc/HighReportRate
+    chown system system /proc/report_threshold
+    chown system system /proc/edge_grid_zone
+    # Let pen taps wake the screen; the driver applies the mode on suspend.
+    write /proc/pen_wakeup_mode 1
+
+# Keep the stock kernel default until a supported identity is reported.
+on property:sys.lenovo.pen.type=2
+    write /proc/pen_type 2
+
+on property:sys.lenovo.pen.type=6
+    write /proc/pen_type 6
+
+# The pen service reports the Bluetooth pen connection; this enables the controller's pen mode.
+on property:sys.lenovo.pen.support=2
+    write /proc/support_pen 2
+
+on property:sys.lenovo.pen.support=1
+    write /proc/support_pen 1
+
+on property:sys.lenovo.pen.support=0
+    write /proc/support_pen 0

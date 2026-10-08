@@ -3,12 +3,11 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Tab Pen Plus: framework type 1 -> BluetoothPenUtils.transPenType(1) = 2. -->
+    <!-- Stock VID/PID -> controller type, with stock 120 Hz display cap. -->
     <string-array name="config_penIdentityToControllerType" translatable="false">
         <item>17EF:617F=2</item>
+        <item>17EF:622E=6</item>
     </string-array>
-    <string name="config_penInputName" translatable="false">NVTCapacitivePen</string>
-    <string name="config_penUEventDevPath" translatable="false">/devices/platform/novatek_ts</string>
-    <!-- Ready/MAC CHANGE reports precede identity in the NVT pen report path. -->
-    <bool name="config_penEarlyChangeActivity">true</bool>
+    <string name="config_penInputName" translatable="false">goodix_ts_0_pen</string>
+    <string name="config_penUEventDevPath" translatable="false">/devices/platform/gt9976n_thp.0</string>
 </resources>

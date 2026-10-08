@@ -9,8 +9,6 @@ DEVICE_PATH := $(LOCAL_PATH)
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8850/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8850/audio/pal
 
-LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/canoe/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/audio_effects.conf \
@@ -90,6 +88,10 @@ PRODUCT_PACKAGES += \
     FrameworksResTargetWuji \
     TelephonyResOverlayWuji
 
+# Pen
+PRODUCT_PACKAGES += \
+    init.wuji.pen.rc
+
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_whale/android.hardware.sensor.accelerometer.xml \
@@ -140,6 +142,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml
 
 # Touch
+PRODUCT_PACKAGES += \
+    thpd \
+
+LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
+
 PRODUCT_PACKAGES += TouchscreenRotationTarget
 
 # Inherit from the common OEM chipset makefile.

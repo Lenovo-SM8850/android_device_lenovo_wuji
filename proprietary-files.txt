@@ -512,6 +512,10 @@ vendor/lib64/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
 
 # Platform runtime
 product/overlay/CarrierConfigResCommon_Sys.apk:product/app/CarrierConfigResCommon_Sys/CarrierConfigResCommon_Sys.apk;PRESIGNED
+system/lib64/libgdix_afe.so:vendor/lib64/libgdix_afe.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_afe_blob
+system/lib64/libgdix_tsa.so:vendor/lib64/libgdix_tsa.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_tsa_blob
+system/lib64/libgdix_tsc.so:vendor/lib64/libgdix_tsc.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_tsc_blob
+system/lib64/libgdix_tsd.so:vendor/lib64/libgdix_tsd.so;TRYSRCFIRST;EXTRACT_ONLY;FILEGROUP=libgdix_tsd_blob
 vendor/bin/hw/vendor.lenovo.hardware.touchscreen-service
 vendor/bin/ks
 vendor/bin/qms
@@ -606,6 +610,12 @@ vendor/etc/thermal-engine_cpu_4.conf
 vendor/etc/thermal-engine_cpu_6.conf
 vendor/etc/thermal-engine_cpu_9.conf
 vendor/etc/thermal_user_case.conf
+
+# Touchscreen firmware
+vendor/firmware/goodix_config.bin
+vendor/firmware/goodix_config.cfgb
+vendor/firmware/goodix_firmware.bin
+vendor/firmware/goodix_test_limits.csv
 
 # Vendor
 vendor/app/TimeService/TimeService.apk
