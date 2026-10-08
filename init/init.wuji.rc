@@ -50,9 +50,8 @@ on boot
     write /sys/kernel/cnss/recovery 1
 
 
-
-on property:sys.RemotelyProvisionedKey.fetch.completed=1
-    setprop ro.odm.lenovo.attestationkey ${sys.RemotelyProvisionedKey.fetch.completed}
+on property:sys.lenovo.attestationkey=1
+    setprop ro.odm.lenovo.attestationkey ${sys.lenovo.attestationkey}
 
 on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu4/online 1
@@ -61,6 +60,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu7/online 1
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 3628800
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 4742400
+
 service setwlansardsi0 /vendor/bin/setwlansardsi0.sh
     disabled
     user root
