@@ -118,6 +118,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
 
 # Power
+# Recovery touch
+PRODUCT_PACKAGES += \
+    thpd-goodix-recovery \
+    libgdix_tsc_wuji_recovery \
+    libgdix_afe_wuji_recovery \
+    libgdix_tsa_wuji_recovery \
+    libgdix_tsd_wuji_recovery
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
