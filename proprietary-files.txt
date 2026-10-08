@@ -488,7 +488,6 @@ vendor/etc/DOFG_YHTJ.pmd
 vendor/etc/DOFG_YJWJ.pmd
 vendor/etc/assets/usrimg
 vendor/etc/backend_conf.xml
-vendor/etc/dcp_symbols/dcp.elf
 
 # Init
 vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
@@ -520,6 +519,7 @@ vendor/lib64/qtiwakelock.so
 vendor/lib64/libsystem_health_mon2.so
 
 # Firmware / Security
+vendor/bin/activespu
 vendor/bin/hw/android.hardware.gatekeeper-rust-service-qti
 vendor/bin/hw/android.hardware.weaver-service-spu-qti
 vendor/bin/hw/vendor.qti.hardware.spu-service
@@ -528,7 +528,10 @@ vendor/etc/init/android.hardware.gatekeeper-service-spu-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
 vendor/etc/init/android.hardware.weaver-service-spu-qti.rc
 vendor/etc/init/init.vendor.qti.hardware.spu.service.rc
-vendor/firmware/dcp.bin
+vendor/etc/vintf/manifest/android.hardware.secure_element.xml
+vendor/firmware/HYNIX_A003_3Dv9_UFS_4_1.bin
+vendor/firmware/SAVONA_V8_TLC_1Tb_UFS41_GENERAL_P20_FW00.bin
+vendor/firmware/SAVONA_V8_TLC_512Gb_UFS41_GENERAL_P20_FW00.bin
 vendor/firmware/evass.b00
 vendor/firmware/evass.b01
 vendor/firmware/evass.b02
@@ -537,10 +540,10 @@ vendor/firmware/evass.b08
 vendor/firmware/evass.b09
 vendor/firmware/evass.b19
 vendor/firmware/evass.mdt
+vendor/firmware/ffu_config.txt
 vendor/firmware/gen80000_sqe.fw
 vendor/firmware/gen80200_gmu.bin
 vendor/firmware/gen80200_sqe.fw
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libdrmMinimalfsHelper.so
@@ -550,7 +553,6 @@ vendor/lib64/libqti-qesdk-secure.so
 vendor/lib64/libspukeymint.so;DISABLE_DEPS
 vendor/lib64/libspukeymintprovision.so;DISABLE_DEPS
 vendor/lib64/libspukeymintutils.so
-vendor/lib64/vendor.qti.hardware.qteeconnector-V1-ndk.so
 
 # Sensors config
 vendor/etc/sensors/config/alana_fcal_mmc56x3x_0.json
