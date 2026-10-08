@@ -12,6 +12,9 @@ include device/lenovo/sm8850-common/BoardConfigCommon.mk
 TARGET_OTA_ASSERT_DEVICE := wuji,TB324ZC
 TARGET_SCREEN_DENSITY := 360
 
+# Kernel
+BOOT_KERNEL_MODULES += libarc4.ko rfkill.ko
+
 # Verified Boot
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 1785888000
 
