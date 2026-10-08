@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd.xml \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml \
 
-
 # CNE
 PRODUCT_PACKAGES += \
     CneApp.libvndfwk_detect_jni.qti_vendor_symlink
@@ -98,6 +97,15 @@ PRODUCT_COPY_FILES += \
 # IMS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.qualcomm.qti.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.qualcomm.qti.ims.xml
+
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku1/video_system_specs.json \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku2/video_system_specs.json \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku3/video_system_specs.json \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v1/video_system_specs.json \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v2/video_system_specs.json \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v3/video_system_specs.json
 
 # Overlays
 PRODUCT_PACKAGES += \
