@@ -108,4 +108,6 @@
     <!-- Display cutout -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 15,24 A 15,15 0 1,1 -15,24 A 15,15 0 1,1 15,24 Z @dp</string>
+    <!-- Evolution X -->
+    <string name="config_stockFingerprint" translatable="false">Lenovo/TB324ZC_PRC/TB324ZC:16/BQ2A.250831.001/ZUXOS_2.0.10.262_260919_PRC:user/release-keys</string>
 </resources>
