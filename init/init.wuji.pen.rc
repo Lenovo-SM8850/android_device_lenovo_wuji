@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: Apache-2.0
+
+on post-fs-data
+    chown system system /proc/pen_type
+    chmod 0660 /proc/pen_type
+    chown system system /proc/HighReportRate
+    chmod 0660 /proc/HighReportRate
+
+# Keep the stock kernel default until a supported identity is reported.
+on property:sys.lenovo.pen.type=2
+    write /proc/pen_type 2
+
+on property:sys.lenovo.pen.type=6
+    write /proc/pen_type 6

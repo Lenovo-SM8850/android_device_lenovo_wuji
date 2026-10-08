@@ -106,16 +106,9 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayBaldur \
     FrameworksResTargetWuji
 
-# Recovery touch requires Novatek firmware in the direct search path.
-PRODUCT_COPY_FILES += \
-    vendor/lenovo/wuji/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
-
 # Pen
 PRODUCT_PACKAGES += \
-    init.baldur.pen.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc
+    init.wuji.pen.rc
 
 # Permission XMLs
 PRODUCT_COPY_FILES += \
@@ -148,6 +141,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml
+
+# Touch
+PRODUCT_PACKAGES += \
+    thpd
 
 LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 
