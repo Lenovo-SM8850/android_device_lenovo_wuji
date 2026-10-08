@@ -15,6 +15,9 @@ TARGET_SCREEN_DENSITY := 360
 # Kernel
 BOOT_KERNEL_MODULES += libarc4.ko rfkill.ko
 
+# SELinux
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+
 # Verified Boot
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 1785888000
 
