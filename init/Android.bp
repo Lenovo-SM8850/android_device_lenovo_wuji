@@ -20,12 +20,12 @@ prebuilt_etc {
     vendor_ramdisk_available: true,
 }
 
-// NVT pen
 prebuilt_etc {
-    name: "init.baldur.pen.rc",
-    src: "init.baldur.pen.rc",
-    sub_dir: "init",
+    name: "init.wuji.pen.rc",
     vendor: true,
+    src: "init.wuji.pen.rc",
+    sub_dir: "init",
+    filename_from_src: true,
 }
 
 prebuilt_etc {
