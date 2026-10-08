@@ -562,16 +562,20 @@ vendor/lib64/libQshSession.so
 vendor/lib64/sensors.qsh.so
 
 # Sensors config
+vendor/etc/sensors/config/alana_fcal_mmc56x3x_0.json
 vendor/etc/sensors/config/json.lst
 vendor/etc/sensors/config/kaanapali_aw963xx_0.json
 vendor/etc/sensors/config/kaanapali_aw963xx_0_sar_register.json
 vendor/etc/sensors/config/kaanapali_bu52053nvx_0.json
 vendor/etc/sensors/config/kaanapali_icm536xx_0.json
 vendor/etc/sensors/config/kaanapali_lsm6dsv_0.json
+vendor/etc/sensors/config/kaanapali_lsm6dsv_1.json
 vendor/etc/sensors/config/kaanapali_mmc56x3x_0.json
+vendor/etc/sensors/config/kaanapali_mtp_mmc56x3x_0.json
 vendor/etc/sensors/config/kaanapali_qmc630x_0.json
-vendor/etc/sensors/config/kaanapali_sx932x_0.json
-vendor/etc/sensors/config/kaanapali_tmd3765_0.json
+vendor/etc/sensors/config/kaanapali_stk3a5x_0.json
+vendor/etc/sensors/config/molokai_mtp_mmc56x3x_0.json
+vendor/etc/sensors/javalibs/odpmanagerlib.jar
 
 # SmartPA calibration / camera native dependencies
 vendor/bin/aw882xx_cali
@@ -667,6 +671,8 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/hexlp.policy
 vendor/etc/seccomp_policy/qspm.policy
 vendor/etc/seccomp_policy/qwesd@2.0.policy
+vendor/etc/sensors/config/kaanapali_sx932x_0.json
+vendor/etc/sensors/config/kaanapali_tmd3765_0.json
 vendor/etc/ssg/ta_config.json
 vendor/etc/thermal-engine_gpu_2.conf
 vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
