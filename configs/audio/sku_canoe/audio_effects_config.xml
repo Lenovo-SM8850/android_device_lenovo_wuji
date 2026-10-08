@@ -20,8 +20,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <!--DOLBY DAP-->
         <library name="dap" path="libswdapaidl.so"/>
         <library name="dvl" path="libdlbvolaidl.so"/>
-        <!--DOLBY SPATIALIZER-->
-        <library name="spatializer" path="libswspatializeraidl.so"/>
         <!--DOLBY GAME-->
         <library name="gamedap" path="libswgamedapaidl.so"/>
         <!--DOLBY END-->
@@ -80,8 +78,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <effect name="dlb_ring_listener" library="dvl" uuid="21d14087-558a-4f21-94a9-5002dce64bce" type="fa81de0e-588b-11ed-9b6a-0242ac120002"/>
         <effect name="dlb_alarm_listener" library="dvl" uuid="6aff229c-30c6-4cc8-9957-dbfe5c1bd7f6" type="fa81de0e-588b-11ed-9b6a-0242ac120002"/>
         <effect name="dlb_notification_listener" library="dvl" uuid="1f0091e3-6ad8-40fe-9b09-5948f9a26e7e" type="fa81de0e-588b-11ed-9b6a-0242ac120002"/>
-        <!--DOLBY SPATIALIZER-->
-        <effect name="spatializer" library="spatializer" uuid="ccd4cf09-a79d-46c2-9aae-06a1698d6c8f"/>
         <!--DOLBY GAME-->
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2" type="fa81de0e-588b-11ed-9b6a-0242ac120002"/>
         <!--DOLBY END-->

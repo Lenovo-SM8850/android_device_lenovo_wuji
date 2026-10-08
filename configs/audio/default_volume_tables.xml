@@ -27,15 +27,15 @@
     </reference>
     <reference name="DEFAULT_SYSTEM_VOLUME_CURVE">
     <!-- Default System reference Volume Curve -->
-        <point>1,-2400</point>
-        <point>33,-1800</point>
-        <point>66,-1200</point>
+        <point>1,-4800</point>
+        <point>33,-3000</point>
+        <point>66,-1800</point>
         <point>100,-600</point>
     </reference>
     <reference name="DEFAULT_MEDIA_VOLUME_CURVE">
     <!-- Default Media reference Volume Curve -->
         <point>1,-8000</point>
-        <point>6,-6150</point>
+        <point>6,-6300</point>
         <point>13,-5850</point>
         <point>20,-5250</point>
         <point>26,-4650</point>
@@ -53,7 +53,7 @@
     </reference>
     <reference name="DEFAULT_DEVICE_CATEGORY_HEADSET_VOLUME_CURVE">
     <!--Default Volume Curve -->
-        <point>0,-4950</point>
+        <point>1,-4950</point>
         <point>33,-3350</point>
         <point>66,-1700</point>
         <point>100,0</point>
@@ -66,11 +66,11 @@
             <point>20,-4150</point>
             <point>26,-3500</point>
             <point>33,-3150</point>
-            <point>40,-2800</point>
-            <point>46,-2470</point>
-            <point>53,-2100</point>
+            <point>40,-2850</point>
+            <point>46,-2550</point>
+            <point>53,-2150</point>
             <point>60,-1750</point>
-            <point>66,-1350</point>
+            <point>66,-1400</point>
             <point>73,-1170</point>
             <point>80,-1000</point>
             <point>86,-800</point>
