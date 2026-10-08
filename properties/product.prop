@@ -7,3 +7,8 @@ ro.product.brand_for_attestation=Lenovo
 ro.product.name_for_attestation=TB324ZC
 ro.product.device_for_attestation=TB324ZC
 ro.product.manufacturer_for_attestation=LENOVO
+
+# Remote key provisioning
+remote_provisioning.hostname=
+remote_provisioning.strongbox.rkp_only=false
+remote_provisioning.tee.rkp_only=false
