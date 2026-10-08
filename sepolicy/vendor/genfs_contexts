@@ -1,1 +1,3 @@
 genfscon proc /pen_type u:object_r:vendor_proc_goodix_pen:s0
+
+genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup u:object_r:sysfs_wakeup:s0

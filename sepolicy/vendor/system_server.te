@@ -1,0 +1,2 @@
+# Stock fingerprint vendor identity is consumed by the framework.
+get_prop(system_server, vendor_lenovo_fingerprint_prop)
