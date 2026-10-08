@@ -54,6 +54,8 @@ vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libqcrilNrVoiceModule.so
 vendor/lib64/qcrilNr_aidl_IRadioVoice.so
+vendor/lib64/soundfx/libswdapaidl.so;DISABLE_DEPS
+vendor/lib64/soundfx/libswgamedapaidl.so
 
 # Audio effects
 vendor/lib64/soundfx/libquasar.so
@@ -349,6 +351,9 @@ vendor/etc/displayconfig/display_id_4630946850534658451.xml
 vendor/etc/displayconfig/display_id_4630947039571902850.xml
 vendor/etc/displayconfig/display_id_4630947039571902851.xml
 vendor/etc/displayconfig/display_id_4630947075271898515.xml
+
+# Dolby audio
+vendor/etc/dolby/dax-default.xml
 
 # DSP / FastRPC
 vendor/lib/rfsa/adsp/capi_dofg_nn.so.1
