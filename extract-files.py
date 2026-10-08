@@ -70,19 +70,14 @@ blob_fixups: blob_fixups_user_type = {
     # hardware/lenovo/touch/thp/thpd.rc.  Drop the stock lines so our 0660 stays.
     'vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc': blob_fixup()
         .regex_replace('    chmod \\+rw /dev/(?:input_agent|thp)\\n', ''),
+    (
+        'vendor/lib64/c2.dolby.vision.dec.so',
+        'vendor/lib64/c2.dolby.vision.sec.dec.so',
+    ): blob_fixup()
+        .add_needed('libcodec2_shim.so'),
     'vendor/lib64/soundfx/libswgamedapaidl.so': blob_fixup()
         .replace_needed('android.hardware.audio.effect-V3-ndk.so', 'android.hardware.audio.effect-V4-ndk.so')
         .replace_needed('android.media.audio.common.types-V4-ndk.so', 'android.media.audio.common.types-V5-ndk.so'),
-    (
-        'vendor/etc/media_codecs_canoe_v2_vendor.xml',
-        'vendor/etc/media_codecs_performance_canoe_sku1_vendor.xml',
-        'vendor/etc/media_codecs_performance_canoe_sku2_vendor.xml',
-        'vendor/etc/media_codecs_performance_canoe_sku3.xml',
-        'vendor/etc/media_codecs_performance_canoe_sku3_vendor.xml',
-        'vendor/etc/media_codecs_performance_canoe_v1_vendor.xml',
-        'vendor/etc/media_codecs_performance_canoe_v2_vendor.xml',
-    ): blob_fixup()
-        .regex_replace('\\s*<MediaCodec\\b[^>]*(?:name="[^"]*(?:dolby|\\.dv\\.)[^"]*"|type="video/dolby-vision")[^>]*>[\\s\\S]*?</MediaCodec>', ''),
     'vendor/etc/wifi/peach_v2/WCNSS_qcom_cfg.ini': blob_fixup()
         .call(enable_ull_scan_requests, need_tmp_dir=False),
     'vendor/bin/init.qti.kernel.early_debug.sh': blob_fixup()
