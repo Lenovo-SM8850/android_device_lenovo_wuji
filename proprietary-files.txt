@@ -756,3 +756,27 @@ vendor/lib64/vendor.qti.gnss-service.so
 
 # WLAN
 vendor/etc/vintf/manifest/vendor.qti.hardware.data.iwlandata.xml
+vendor/etc/wifi/CNN_Orne_iPA_2G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_2G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_5G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_320MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_iPA_6G_320MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_2G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_2G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_5G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_160MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_160MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_20MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_20MHz_MM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_320MHz_EVM.tflite
+vendor/etc/wifi/CNN_Orne_xPA_6G_320MHz_MM.tflite
