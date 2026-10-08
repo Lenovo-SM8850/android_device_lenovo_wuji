@@ -10,7 +10,11 @@ include device/lenovo/sm8850-common/BoardConfigCommon.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := wuji,TB324ZC
+
+# Display
+$(call soong_config_set,lenovo_display,display_core_abi_profile,sdm_abi_v2)
 TARGET_SCREEN_DENSITY := 360
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 
 # Kernel
 BOOT_KERNEL_MODULES += libarc4.ko rfkill.ko

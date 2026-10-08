@@ -15,6 +15,10 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/perf_hint_threshold.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/perf_hint_threshold.xml \
+    $(LOCAL_PATH)/configs/display/privacy_regions_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/privacy_regions_offsets.xml
+
 # Init
 PRODUCT_PACKAGES += ueventd.wuji.rc
 

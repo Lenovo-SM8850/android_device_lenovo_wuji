@@ -4,18 +4,9 @@ ro.camerax.extensions.enabled=true
 ro.vendor.config.lgsi.project=wuji
 
 # Display
-ro.vendor.display.cabl=2
-ro.vendor.display.paneltype=1
-ro.vendor.display.sensortype=2
-ro.vendor.display.svi=1
-vendor.display.cabl.config=1
-vendor.display.cabl.config_path=/vendor/etc/cablconfig.xml
-vendor.display.lcd_density=440
+vendor.display.lcd_density=360
 vendor.display.stc_disable_hdr_modes=1
-vendor.display.svi.config=1
-vendor.display.svi.config_path=/vendor/etc/display/SVIConfig.xml
-vendor.display.svi_threshold_nits=500
-vendor.display.use_smooth_motion=0
+vendor.display.use_smooth_motion=1
 
 # DPM
 persist.vendor.dpm.vndr.feature=11
@@ -39,4 +30,8 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.rcs.singlereg.feature=2
 
 # SurfaceFlinger
-persist.sys.sf.native_mode=257
+ro.surface_flinger.enable_frame_rate_override=false
+ro.surface_flinger.set_launcher_timer_ms=30000
+ro.surface_flinger.set_pen_timer_ms=10000
+ro.surface_flinger.set_refresh_timer_ms=200
+ro.surface_flinger.set_touch_timer_ms=3500
