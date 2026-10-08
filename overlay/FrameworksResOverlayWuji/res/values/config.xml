@@ -110,6 +110,7 @@
 
     <!-- Display cutout -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+    <bool name="config_hideDisplayCutoutInLandscape">true</bool>
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 15,24 A 15,15 0 1,1 -15,24 A 15,15 0 1,1 15,24 Z @dp</string>
 
     <!-- IWLAN -->
