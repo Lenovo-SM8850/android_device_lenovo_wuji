@@ -5,14 +5,13 @@
 // Device init
 
 prebuilt_etc {
-    name: "init.baldur.rc",
+    name: "init.wuji.rc",
     required: ["init.lenovo.rc"],
-    src: "init.baldur.rc",
+    src: "init.wuji.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
-// Device fstab.
 prebuilt_etc {
     name: "fstab.qcom",
     src: "fstab.qcom",
@@ -20,25 +19,10 @@ prebuilt_etc {
     vendor_ramdisk_available: true,
 }
 
-// NVT pen
 prebuilt_etc {
-    name: "init.baldur.pen.rc",
-    src: "init.baldur.pen.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "ueventd.baldur.rc",
+    name: "ueventd.wuji.rc",
     filename: "ueventd.rc",
-    src: "ueventd.baldur.rc",
+    src: "ueventd.wuji.rc",
     required: ["ueventd.lenovo.rc"],
     device_specific: true,
-}
-
-prebuilt_etc {
-    name: "init.baldur.lcd.rc",
-    src: "init.baldur.lcd.rc",
-    sub_dir: "init",
-    vendor: true,
 }

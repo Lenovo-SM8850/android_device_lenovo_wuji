@@ -122,7 +122,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <!-- end of sink mixports-->
     </mixPorts>
     <devicePorts>
-	<!-- start of sink DEVICE PORT -->
+        <!-- start of sink DEVICE PORT -->
 	<!--<devicePort tagName="earpiece" role="sink" attached="true" deviceType="OUT_SPEAKER_EARPIECE">
             <profile samplingRates="48000" channelLayouts="LAYOUT_MONO" formatType="PCM" pcmType="INT_16_BIT" />
 	</devicePort> -->

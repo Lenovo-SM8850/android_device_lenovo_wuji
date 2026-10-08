@@ -3,4 +3,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_baldur.mk
+    $(LOCAL_DIR)/lineage_wuji.mk

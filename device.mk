@@ -3,62 +3,19 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/lenovo/baldur
+LOCAL_PATH := device/lenovo/wuji
 DEVICE_PATH := $(LOCAL_PATH)
 
-LENOVO_DEVICE_CONFIG_PATH := device/lenovo/baldur
+LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 
 # Display
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Hardware configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/sku_alor/resourcemanager_alor_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_alor/resourcemanager_alor_cdp.xml \
-    $(LOCAL_PATH)/configs/audio/sku_alor/resourcemanager_alor_mtp_wcd9378.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_alor/resourcemanager_alor_mtp_wcd9378.xml \
-    $(LOCAL_PATH)/configs/audio/sku_alor/resourcemanager_alor_mtp_wcd939x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_alor/resourcemanager_alor_mtp_wcd939x.xml \
-    $(LOCAL_PATH)/configs/audio/sku_alor/resourcemanager_alor_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_alor/resourcemanager_alor_qrd.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/mixer_paths_canoe_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/mixer_paths_canoe_cdp.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/mixer_paths_canoe_cdp_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/mixer_paths_canoe_cdp_wsa884x.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/mixer_paths_canoe_cdp_wsa885xi2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/mixer_paths_canoe_cdp_wsa885xi2s.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/mixer_paths_canoe_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/mixer_paths_canoe_mtp.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/mixer_paths_canoe_mtp_qmp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/mixer_paths_canoe_mtp_qmp.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/mixer_paths_canoe_mtp_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/mixer_paths_canoe_mtp_wsa884x.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_atp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_atp.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_cdp.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_cdp_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_cdp_wsa884x.xml \
-    $(LOCAL_PATH)/configs/audio/sku_canoe/resourcemanager_canoe_cdp_wsa885xi2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_canoe/resourcemanager_canoe_cdp_wsa885xi2s.xml \
-    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946261688083603.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946261688083603.xml \
-    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946916234099603.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946916234099603.xml
-
-# IMS
-# SystemUI requires IMS discovery on Wi-Fi-only devices.
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.xml
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Init
-PRODUCT_PACKAGES += init.baldur.lcd.rc
-
-PRODUCT_PACKAGES += ueventd.baldur.rc
+PRODUCT_PACKAGES += ueventd.wuji.rc
 
 PRODUCT_PACKAGES += \
-    init.baldur.rc
-
-# Overlays
-PRODUCT_PACKAGES += \
-    FrameworksResOverlayBaldur \
-    FrameworksResTargetBaldur
-
-# Pen
-PRODUCT_PACKAGES += \
-    init.baldur.pen.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc
-
-# Recovery
-# Recovery touch requires Novatek firmware in the direct search path.
-PRODUCT_COPY_FILES += \
-    vendor/lenovo/baldur/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
+    init.wuji.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -71,4 +28,4 @@ PRODUCT_PACKAGES += TouchscreenRotationTarget
 $(call inherit-product, device/lenovo/sm8850-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/lenovo/baldur/baldur-vendor.mk)
+$(call inherit-product, vendor/lenovo/wuji/wuji-vendor.mk)
