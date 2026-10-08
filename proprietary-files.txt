@@ -355,6 +355,14 @@ vendor/etc/displayconfig/display_id_4630947075271898515.xml
 # Dolby audio
 vendor/etc/dolby/dax-default.xml
 
+# Dolby Vision
+system/etc/dolby_vision.cfg
+vendor/etc/dolby_vision.cfg
+vendor/persist/display/dolby_vision.cfg
+
+# Dolby Vision system proxy
+system/lib64/libdolbyproxyandroid.so;MODULE_SUFFIX=-system
+
 # DSP / FastRPC
 vendor/lib/rfsa/adsp/capi_dofg_nn.so.1
 vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
