@@ -90,21 +90,3 @@ service setwlansardsi4 /vendor/bin/setwlansardsi4.sh
     user root
     oneshot
     group root root
-
-on property:debug.zui.antutu_status=1
-    setprop sys.ui.perfmode.enable 1
-	
-on property:debug.zui.antutu_status=2
-    setprop sys.ui.perfmode.enable 1
-	
-on property:debug.zui.antutu_status=3
-    setprop sys.ui.perfmode.enable 1
-	
-on property:debug.zui.antutu_status=4
-    setprop sys.ui.perfmode.enable 1
-	
-on property:debug.zui.antutu_status=0
-    setprop sys.ui.perfmode.enable 1
-	
-on property:debug.zui.antutu_status=-1
-    setprop sys.ui.perfmode.enable 0
