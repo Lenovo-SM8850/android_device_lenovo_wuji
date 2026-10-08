@@ -9,9 +9,6 @@ vendor.display.use_smooth_motion=1
 # DPM
 persist.vendor.dpm.vndr.feature=11
 
-# DRM
-vendor.wv.oemcrypto.debug.enable_prov40=true
-
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.data.mutualex.mode=wifipreferred
