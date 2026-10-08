@@ -1,0 +1,3 @@
+# Telephony
+ro.telephony.default_network=26,26
+ro.telephony.sim_slots.count=2
