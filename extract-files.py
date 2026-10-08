@@ -49,16 +49,23 @@ def enable_ull_scan_requests(ctx, file, file_path, **kwargs):
 
 
 blob_fixups: blob_fixups_user_type = {
-    (
-        'vendor/lib64/soundfx/libquasar.so',
-        'vendor/lib64/camera/components/com.qti.node.fd.so',
-        'vendor/lib64/hw/camera.qcom.core.so',
-        'vendor/lib64/libcamerapoweroptfeature.so',
-        'vendor/lib64/libcamxdumpinforecorder.so',
-    ): blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
-    'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+        (
+            'vendor/lib64/soundfx/libquasar.so',
+            'vendor/lib64/camera/components/com.qti.node.fd.so',
+            'vendor/lib64/hw/camera.qcom.core.so',
+            'vendor/lib64/libcamerapoweroptfeature.so',
+            'vendor/lib64/libcamxdumpinforecorder.so',
+        ): blob_fixup()
+            .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
+        'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
+            .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    'vendor/etc/init/fingerprint-gfcap.rc': blob_fixup()
+        .regex_replace('    disabled\n',
+                       '    class hal\n'
+                       '    interface aidl android.hardware.biometrics.fingerprint.IFingerprint/default\n'
+                       '    interface aidl vendor.goodix.hardware.biometrics.fingerprint.cap.IGoodixFingerprintDaemon/default\n')
+        .regex_replace('0777', '0660')
+        .regex_replace('on property:sys.boot_completed=1\n    start vendor.fingerprint-gf\n', ''),
     (
         'vendor/etc/media_codecs_canoe_v2_vendor.xml',
         'vendor/etc/media_codecs_performance_canoe_sku1_vendor.xml',
@@ -86,7 +93,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'baldur',
+    'wuji',
     'lenovo',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -98,6 +105,9 @@ module = ExtractUtilsModule(
 shared_module = ExtractUtils.get_module('sm8850-common', module.vendor)
 module.blob_fixups = {**shared_module.blob_fixups, **module.blob_fixups}
 module.lib_fixups = {**shared_module.lib_fixups, **module.lib_fixups}
+
+
+module.add_proprietary_file('proprietary-files-phone.txt')
 
 
 if __name__ == '__main__':

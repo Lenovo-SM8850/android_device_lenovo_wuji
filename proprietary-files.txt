@@ -274,6 +274,7 @@ vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libhwliqinterface2.so
 vendor/lib64/libqfdservice.so
 vendor/lib64/libsiminputgenutil.so
+vendor/lib64/libssd.so
 
 # Display calibration
 vendor/etc/display/qdcm_calib_data_nt37801_amoled_cmd_mode_dsi_csot_panel_with_DSC.json
@@ -308,6 +309,8 @@ vendor/firmware/evass.b08
 vendor/firmware/evass.b09
 vendor/firmware/evass.b19
 vendor/firmware/evass.mdt
+vendor/lib64/libGPMTEEC_vendor.so
+vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libspuprovisionids.so
 vendor/lib64/libtee_provisioner_qti.so
