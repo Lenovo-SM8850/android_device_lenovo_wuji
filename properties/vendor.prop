@@ -3,7 +3,6 @@ ro.vendor.config.lgsi.project=wuji
 
 # Display
 vendor.display.lcd_density=360
-vendor.display.stc_disable_hdr_modes=1
 vendor.display.use_smooth_motion=1
 
 # DPM
