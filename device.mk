@@ -59,9 +59,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd.xml \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946916234099603.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946916234099603.xml
-
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_whale/android.hardware.sensor.accelerometer.xml \
@@ -88,7 +85,11 @@ PRODUCT_PACKAGES += \
     init.lenovo.wuji.rc
 
 # Display
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/perf_hint_threshold.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/perf_hint_threshold.xml \
+    $(LOCAL_PATH)/configs/display/privacy_regions_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/privacy_regions_offsets.xml
 
 # IMS
 # SystemUI requires IMS discovery on Wi-Fi-only devices.
@@ -99,16 +100,16 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayBaldur \
     FrameworksResTargetBaldur
 
+# Recovery touch requires Novatek firmware in the direct search path.
+PRODUCT_COPY_FILES += \
+    vendor/lenovo/wuji/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
+
 # Pen
 PRODUCT_PACKAGES += \
     init.baldur.pen.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc
-
-# Recovery touch requires Novatek firmware in the direct search path.
-PRODUCT_COPY_FILES += \
-    vendor/lenovo/wuji/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

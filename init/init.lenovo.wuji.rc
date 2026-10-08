@@ -44,6 +44,19 @@ on boot
     write /sys/class/remoteproc/remoteproc3/recovery enabled
 
 
+on property:vendor.display.lcd_density=640
+    setprop dalvik.vm.heapgrowthlimit 512m
+
+service colorbin /vendor/bin/colorbin
+    class main
+    user system
+    group system
+    disabled
+    oneshot
+    seclabel u:r:colorbin:s0
+on post-fs
+    start colorbin
+
 on property:sys.lenovo.attestationkey=1
     setprop ro.odm.lenovo.attestationkey ${sys.lenovo.attestationkey}
 
@@ -54,5 +67,3 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu7/online 1
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 3628800
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 4742400
-on property:vendor.display.lcd_density=640
-    setprop dalvik.vm.heapgrowthlimit 256m

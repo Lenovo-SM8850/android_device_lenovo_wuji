@@ -1,0 +1,2 @@
+# SurfaceFlinger idle detection
+ro.surface_flinger.set_idle_timer_ms=2000
