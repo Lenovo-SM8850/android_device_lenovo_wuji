@@ -601,7 +601,6 @@ vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/loadalgo
 vendor/bin/lowi-server
-vendor/bin/lrootfs.sh
 vendor/bin/nvram_cc
 vendor/bin/port-bridge
 vendor/bin/qseecomd
@@ -619,7 +618,6 @@ vendor/bin/wifi_qos_daemon
 vendor/bin/xtwifi-client
 vendor/etc/CHGPD.cfg
 vendor/etc/CHGPD_Baldur.cfg
-vendor/etc/assets/lrootfs-20260409.tgz
 vendor/etc/data/dsi_config.xml
 vendor/etc/hexlp/hexlpservice_boot_config.json
 vendor/etc/hexlp_unsigned/hexlpservice_boot_config.json
@@ -627,7 +625,6 @@ vendor/etc/init/hexlpservice.rc
 vendor/etc/init/hlosminkdaemon.rc
 vendor/etc/init/init.qccvendor.rc
 vendor/etc/init/lowi-server.rc
-vendor/etc/init/lrootfs.rc
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qsap.mpamsvc.rc
 vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:vendor/etc/init/vendor.qti.hardware.vibrator.service-lenovo.rc
