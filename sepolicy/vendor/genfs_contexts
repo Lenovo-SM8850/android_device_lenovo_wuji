@@ -1,4 +1,1 @@
-genfscon proc /pen_type u:object_r:vendor_proc_nvt_pen:s0
-genfscon proc /pen_wakeup_mode u:object_r:vendor_proc_nvt_pen:s0
-genfscon proc "/android_touch/self_test" u:object_r:vendor_proc_ito:s0
-genfscon proc "/nvt_fw_version" u:object_r:vendor_proc_tpver:s0
+genfscon proc /pen_type u:object_r:vendor_proc_goodix_pen:s0

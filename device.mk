@@ -8,7 +8,6 @@ LENOVO_HAS_MODEM := true
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8850/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8850/audio/pal
 
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/canoe/quasar_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/quasar_config.xml \
@@ -50,7 +49,6 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_PAL_DIR)/configs/qcom/mobile/canoe/resourcemanager_canoe_cdp_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_cdp_wsa884x.xml \
     $(AUDIO_PAL_DIR)/configs/qcom/mobile/canoe/resourcemanager_canoe_cdp_wsa885xi2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_cdp_wsa885xi2s.xml \
     $(AUDIO_HAL_DIR)/configs/canoe/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale_qssi/audio_policy_configuration.xml
-
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_whale/mixer_paths_canoe_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/mixer_paths_canoe_qrd.xml \
@@ -106,18 +104,11 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayBaldur \
-    FrameworksResTargetWuji
-
-# Recovery touch requires Novatek firmware in the direct search path.
-PRODUCT_COPY_FILES += \
-    vendor/lenovo/wuji/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/lib/firmware/novatek_ts_fw.bin
+    FrameworksResTargetWuji \
 
 # Pen
 PRODUCT_PACKAGES += \
-    init.baldur.pen.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc
+    init.wuji.pen.rc
 
 # Performance
 # Permission XMLs
@@ -152,6 +143,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml
+
+# Touch
+PRODUCT_PACKAGES += \
+    thpd
 
 LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 

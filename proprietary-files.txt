@@ -631,6 +631,10 @@ vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc
 
 # Platform runtime
 product/overlay/CarrierConfigResCommon_Sys.apk:product/app/CarrierConfigResCommon_Sys/CarrierConfigResCommon_Sys.apk;PRESIGNED
+system/lib64/libgdix_afe.so:vendor/lib64/libgdix_afe.so;TRYSRCFIRST
+system/lib64/libgdix_tsa.so:vendor/lib64/libgdix_tsa.so;TRYSRCFIRST
+system/lib64/libgdix_tsc.so:vendor/lib64/libgdix_tsc.so;TRYSRCFIRST
+system/lib64/libgdix_tsd.so:vendor/lib64/libgdix_tsd.so;TRYSRCFIRST
 vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/vendor.lenovo.hardware.touchscreen-service
 vendor/bin/ks
@@ -762,8 +766,10 @@ vendor/etc/thermal-engine_cpu_9.conf
 vendor/etc/thermal_user_case.conf
 
 # Touchscreen firmware
-vendor/firmware/novatek_ts_fw.bin
-vendor/firmware/novatek_ts_mp.bin
+vendor/firmware/goodix_config.bin
+vendor/firmware/goodix_config.cfgb
+vendor/firmware/goodix_firmware.bin
+vendor/firmware/goodix_test_limits.csv
 
 # Device ABI consumers
 vendor/lib64/libQnnHtpV81Stub.so|d27f7a1b699764e72448a5cfc2e60c3de112d6db
