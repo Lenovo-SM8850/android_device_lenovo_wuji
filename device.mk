@@ -63,6 +63,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946653341585811.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946653341585811.xml
 
+# Carrier settings
+PRODUCT_PACKAGES += \
+    LenovoMcfgLoader \
+    privapp-permissions-io.github.miner7222.mcfg \
+    init.lenovo.mcfg-loader.rc \
+    vendor.lenovo.mcfg-loader \
+    vendor.lenovo.mcfg-restart
+$(call inherit-product, vendor/lenovo/wuji-mcfg/mcfg-loader-vendor.mk)
+
 # CNE
 PRODUCT_PACKAGES += \
     CneApp.libvndfwk_detect_jni.qti_vendor_symlink

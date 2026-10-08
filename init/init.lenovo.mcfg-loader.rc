@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: Apache-2.0
+on post-fs-data
+    mkdir /data/vendor/mcfg-loader 0700 radio radio
+    restorecon_recursive /data/vendor/mcfg-loader
+
+on boot
+    start vendor.lenovo.mcfg-loader
+
+on property:vendor.lenovo.mcfg.restart=1
+    start vendor.lenovo.mcfg-restart
