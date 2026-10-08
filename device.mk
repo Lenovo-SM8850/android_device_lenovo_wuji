@@ -58,6 +58,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd.xml \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml \
 
+# Carrier settings
+PRODUCT_PACKAGES += \
+    LenovoMcfgLoader \
+    privapp-permissions-io.github.miner7222.mcfg \
+    init.lenovo.mcfg-loader.rc \
+    vendor.lenovo.mcfg-loader \
+    vendor.lenovo.mcfg-restart
+$(call inherit-product, vendor/lenovo/wuji-mcfg/mcfg-loader-vendor.mk)
+
 # CNE
 PRODUCT_PACKAGES += \
     CneApp.libvndfwk_detect_jni.qti_vendor_symlink

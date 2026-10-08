@@ -1,0 +1,1 @@
+type hal_lenovo_mcfg_service, hal_service_type, protected_service, service_manager_type;

@@ -1,1 +1,6 @@
 vendor_restricted_prop(vendor_lenovo_fingerprint_prop)
+
+vendor_internal_prop(vendor_lenovo_mcfg_restart_prop)
+
+# Only the loader requests restart; init domains retain platform property access.
+neverallow { domain -vendor_lenovo_mcfg_loader -init -vendor_init } vendor_lenovo_mcfg_restart_prop:property_service set;
