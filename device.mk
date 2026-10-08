@@ -59,8 +59,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml \
 
 
-PRODUCT_PACKAGES += \
-    TelephonyResOverlayWuji
 # CNE
 PRODUCT_PACKAGES += \
     CneApp.libvndfwk_detect_jni.qti_vendor_symlink
@@ -103,8 +101,11 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayBaldur \
-    FrameworksResTargetWuji
+    FrameworksResOverlayWuji \
+    FrameworksResTargetWuji \
+    SystemUIOverlayWuji \
+    TelephonyResOverlayWuji
+
 
 # Pen
 PRODUCT_PACKAGES += \
@@ -115,6 +116,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
+
 # Power
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
