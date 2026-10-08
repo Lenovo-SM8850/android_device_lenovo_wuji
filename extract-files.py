@@ -34,9 +34,6 @@ lib_fixups: lib_fixups_user_type = {
 
 # Device blob fixups
 blob_fixups: blob_fixups_user_type = {
-    'vendor/etc/displayconfig/display_id_4630946261688083603.xml': blob_fixup()
-        .regex_replace(r'<minimumHdrPercentOfScreen>0\.1</minimumHdrPercentOfScreen>',
-                       '<minimumHdrPercentOfScreen>0.05</minimumHdrPercentOfScreen>'),
         (
             'vendor/lib64/soundfx/libquasar.so',
             'vendor/lib64/camera/components/com.qti.node.fd.so',
@@ -72,7 +69,7 @@ blob_fixups: blob_fixups_user_type = {
 
 
 module = ExtractUtilsModule(
-    'baldur',
+    'wuji',
     'lenovo',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -84,13 +81,19 @@ shared_module = ExtractUtils.get_module('sm8850-common', module.vendor)
 module.blob_fixups = {**shared_module.blob_fixups, **module.blob_fixups}
 module.lib_fixups = {**shared_module.lib_fixups, **module.lib_fixups}
 
+def write_shared_identical_packages(ctx, packages_ctx):
+    shared_module.write_shared_packages(ctx, packages_ctx,
+        module.device_path + '/shared-identical-packages.txt', 'abi-v2')
+
+for proprietary_file in module.proprietary_files:
+    proprietary_file.add_post_makefile_generation_fn(write_shared_identical_packages)
+
 def write_shared_buildid_packages(ctx, packages_ctx):
     shared_module.write_shared_packages(ctx, packages_ctx,
-        module.device_path + '/shared-buildid-packages.txt', 'abi-v1')
+        module.device_path + '/shared-buildid-packages.txt', 'abi-v2')
 
 for proprietary_file in module.proprietary_files:
     proprietary_file.add_post_makefile_generation_fn(write_shared_buildid_packages)
-
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(module, 'sm8850-common', module.vendor)

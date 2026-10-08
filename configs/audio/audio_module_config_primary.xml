@@ -210,6 +210,9 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <devicePort tagName="built_in_back_mic" deviceType="IN_MICROPHONE_BACK" role="source" attached="true" address="back">
             <profile samplingRates="8000 11025 12000 16000 22050 24000 32000 48000" channelLayouts="LAYOUT_MONO LAYOUT_STEREO LAYOUT_FRONT_BACK" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
+        <devicePort tagName="fm_tuner_mic" deviceType="IN_FM_TUNER" role="source" attached="true">
+            <profile samplingRates="48000" channelLayouts="LAYOUT_MONO LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
+        </devicePort>
         <devicePort tagName="wired_headset_mic" deviceType="IN_HEADSET" connection="analog" role="source">
             <profile samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000" channelLayouts="LAYOUT_MONO LAYOUT_STEREO LAYOUT_FRONT_BACK" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
@@ -273,7 +276,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
 
         <route type="mix" sink="fm_out" sources="low_latency_out" />
         <!-- Input routes -->
-        <route type="mix" sink="primary_in" sources="built_in_mic,built_in_back_mic,wired_headset_mic,bt_sco_headset_mic,telephony_rx,bt_a2dp_mic,echo_reference_mic,bt_le_mic,proxy_input_device,ip_input_device" />
+        <route type="mix" sink="primary_in" sources="built_in_mic,built_in_back_mic,wired_headset_mic,bt_sco_headset_mic,fm_tuner_mic,telephony_rx,bt_a2dp_mic,echo_reference_mic,bt_le_mic,proxy_input_device,ip_input_device" />
         <route type="mix" sink="fast_input" sources="built_in_mic,built_in_back_mic,bt_sco_headset_mic,usb_mic,usb_headset_mic,wired_headset_mic,proxy_input_device,ip_input_device" />
         <route type="mix" sink="fast_raw_input" sources="built_in_mic,built_in_back_mic,bt_sco_headset_mic,usb_mic,usb_headset_mic,wired_headset_mic,proxy_input_device,ip_input_device" />
         <route type="mix" sink="compress_in" sources="built_in_mic,built_in_back_mic,wired_headset_mic,bt_sco_headset_mic,usb_mic,usb_headset_mic,bt_a2dp_mic,echo_reference_mic,bt_le_mic,proxy_input_device,ip_input_device" />
