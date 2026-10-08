@@ -1,0 +1,3 @@
+set_prop(hal_fingerprint_default, vendor_lenovo_fingerprint_prop)
+get_prop(hal_fingerprint_default, lenovo_fingerprint_vendor_prop)
+get_prop(hal_fingerprint_default, vendor_goodix_debug_prop)

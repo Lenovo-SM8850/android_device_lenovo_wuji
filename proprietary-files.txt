@@ -398,6 +398,15 @@ vendor/lib64/libarcsoft_face_biometric.so
 vendor/lib64/libarcsoft_faceid.so
 vendor/lib64/libfaceid_ca_proxy.arcsoft.so
 
+# Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint-service.gfcap
+vendor/bin/hw/qfp-daemon
+vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-gfcap.rc
+vendor/etc/vintf/manifest/fingerprint-default.xml:vendor/etc/vintf/manifest/fingerprint-gfcap.xml
+vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
+vendor/lib64/libgoodixfingerprint.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.cap.so
+
 # Media SV DSP
 vendor/lib64/libsv.so
 vendor/lib64/libsvswcpu.so
@@ -653,6 +662,8 @@ vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/libATFWD.so
 vendor/lib64/libQtiSocket.so
 vendor/lib64/libcne.so
+vendor/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/liblqe.so
 vendor/lib64/libqms.so
