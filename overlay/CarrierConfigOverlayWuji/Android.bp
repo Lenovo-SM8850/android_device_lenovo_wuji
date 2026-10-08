@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: Apache-2.0
+runtime_resource_overlay {
+    name: "CarrierConfigOverlayWuji",
+    product_specific: true,
+    certificate: "platform",
+    // CarrierConfig XML filters require raw MCC/MNC strings, including leading zeros.
+    aaptflags: ["--keep-raw-values"],
+}
