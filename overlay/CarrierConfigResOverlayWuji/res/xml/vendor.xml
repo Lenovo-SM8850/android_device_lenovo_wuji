@@ -3012,5 +3012,8 @@
     <carrier_config mcc="420" mnc="04">
         <boolean name="config_support_set_all_call_barring_over_ims" value="false" />
     </carrier_config>
-
+    <carrier_config>
+        <boolean name="carrier_settings_enable_bool" value="true" />
+        <string name="carrier_settings_activity_component_name_string">io.github.miner7222.mcfg/.McfgStatusActivity</string>
+    </carrier_config>
 </carrier_config_list>
