@@ -393,6 +393,7 @@ vendor/lib64/libfaceid_ca_proxy.arcsoft.so
 
 # Media SV DSP
 vendor/lib64/libsv.so
+vendor/lib64/libsvswcpu.so
 
 # Media / Video
 vendor/bin/init.qti.media.sh
@@ -402,6 +403,7 @@ vendor/etc/media_canoe_sku2/video_system_specs.json
 vendor/etc/media_canoe_sku3/video_system_specs.json
 vendor/etc/media_canoe_v1/video_system_specs.json
 vendor/etc/media_canoe_v2/video_system_specs.json
+vendor/etc/media_canoe_v3/video_system_specs.json
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_canoe_sku1.xml
 vendor/etc/media_codecs_canoe_sku1_vendor.xml
@@ -410,6 +412,8 @@ vendor/etc/media_codecs_canoe_sku3_vendor.xml
 vendor/etc/media_codecs_canoe_v1.xml
 vendor/etc/media_codecs_canoe_v2.xml
 vendor/etc/media_codecs_canoe_v2_vendor.xml
+vendor/etc/media_codecs_canoe_v3.xml
+vendor/etc/media_codecs_canoe_v3_vendor.xml
 vendor/etc/media_codecs_performance_canoe_sku1_vendor.xml
 vendor/etc/media_codecs_performance_canoe_sku2_vendor.xml
 vendor/etc/media_codecs_performance_canoe_sku3.xml
@@ -419,6 +423,8 @@ vendor/etc/media_codecs_performance_canoe_v2_vendor.xml
 vendor/etc/media_codecs_performance_canoe_v3.xml
 vendor/etc/media_codecs_performance_canoe_v3_vendor.xml
 vendor/etc/media_profiles_canoe_sku3.xml
+vendor/etc/media_profiles_canoe_v3.xml
+vendor/etc/media_profiles_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libqcodec2_base.so
@@ -442,10 +448,13 @@ vendor/firmware/evass.mbn
 vendor/firmware/gen80000_zap.mbn
 vendor/firmware/gen80200_zap.mbn
 vendor/firmware/gen80900_zap.mbn
-vendor/firmware/vpu33_4v.mbn
-vendor/firmware/vpu33_4v_unsigned.mbn
-vendor/firmware/vpu35_4v.mbn
-vendor/firmware/vpu35_4v_unsigned.mbn
+vendor/firmware/venus_unsigned.mbn
+vendor/firmware/venus_v6.mbn
+vendor/firmware/venus_v6_rsa.mbn
+vendor/firmware/venus_v7.mbn
+vendor/firmware/vpu20_1v.mbn
+vendor/firmware/vpu20_1v_unsigned.mbn
+vendor/firmware/vpu30_4v.mbn
 vendor/firmware/vpu40_1v.mbn
 vendor/firmware/vpu40_1v_unsigned.mbn
 vendor/firmware/vpu40_2v.mbn
