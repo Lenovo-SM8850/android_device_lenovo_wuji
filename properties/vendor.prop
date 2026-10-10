@@ -25,9 +25,7 @@ persist.vendor.rcs.singlereg.feature=2
 # SurfaceFlinger refresh policy
 ro.surface_flinger.set_touch_timer_ms=3500
 ro.surface_flinger.set_refresh_timer_ms=200
-ro.surface_flinger.display_update_imminent_timeout_ms=1000
 ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.game_default_frame_rate_override=60
 ro.surface_flinger.set_launcher_timer_ms=30000
 ro.surface_flinger.set_pen_timer_ms=10000
 
