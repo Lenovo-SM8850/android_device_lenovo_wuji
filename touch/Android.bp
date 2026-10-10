@@ -1,0 +1,75 @@
+// SPDX-License-Identifier: Apache-2.0
+
+// RECOVERY_AVAILABLE cannot express stl: "none" in extract-utils.
+// Keep the firmware-free host dependency closure identical in recovery.
+
+cc_prebuilt_library_shared {
+    name: "libgdix_afe",
+    owner: "lenovo",
+    srcs: ["//vendor/lenovo/wuji:libgdix_afe_blob"],
+    compile_multilib: "64",
+    shared_libs: [
+        "liblog",
+        "libc",
+        "libm",
+    ],
+    stl: "none",
+    strip: { none: true },
+    prefer: true,
+    soc_specific: true,
+    recovery_available: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgdix_tsa",
+    owner: "lenovo",
+    srcs: ["//vendor/lenovo/wuji:libgdix_tsa_blob"],
+    compile_multilib: "64",
+    shared_libs: [
+        "liblog",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    stl: "none",
+    strip: { none: true },
+    prefer: true,
+    soc_specific: true,
+    recovery_available: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgdix_tsc",
+    owner: "lenovo",
+    srcs: ["//vendor/lenovo/wuji:libgdix_tsc_blob"],
+    compile_multilib: "64",
+    shared_libs: [
+        "liblog",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    stl: "none",
+    strip: { none: true },
+    prefer: true,
+    soc_specific: true,
+    recovery_available: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgdix_tsd",
+    owner: "lenovo",
+    srcs: ["//vendor/lenovo/wuji:libgdix_tsd_blob"],
+    compile_multilib: "64",
+    shared_libs: [
+        "liblog",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    stl: "none",
+    strip: { none: true },
+    prefer: true,
+    soc_specific: true,
+    recovery_available: true,
+}

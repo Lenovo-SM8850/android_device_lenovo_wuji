@@ -121,10 +121,10 @@ PRODUCT_COPY_FILES += \
 # Recovery touch
 PRODUCT_PACKAGES += \
     thpd-goodix-recovery \
-    libgdix_tsc_wuji_recovery \
-    libgdix_afe_wuji_recovery \
-    libgdix_tsa_wuji_recovery \
-    libgdix_tsd_wuji_recovery
+    libgdix_tsc.recovery \
+    libgdix_afe.recovery \
+    libgdix_tsa.recovery \
+    libgdix_tsd.recovery
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -157,7 +157,11 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    thpd
+    thpd \
+    libgdix_afe \
+    libgdix_tsa \
+    libgdix_tsc \
+    libgdix_tsd
 
 LENOVO_DEVICE_CONFIG_PATH := device/lenovo/wuji
 include device/lenovo/sm8850-common/device-configs.mk
