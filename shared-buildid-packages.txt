@@ -65,7 +65,7 @@ vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchinodehmeutils.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libconfigdb.so
-vendor/lib64/libdpps.so
+vendor/lib64/libdpps.so|53f348e8e0e27548beecaec4a7f0888df8a119c5
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfeutils.so
@@ -93,7 +93,7 @@ vendor/lib64/libqshutils.so
 vendor/lib64/libqtigefar.so;DISABLE_DEPS
 vendor/lib64/librpmb.so
 vendor/lib64/libsensorcal.so
-vendor/lib64/libsnapdragoncolor-manager.so
+vendor/lib64/libsnapdragoncolor-manager.so|212591668fb41b69d9a33875d50a043c2b3d3c61
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libspukeymintdeviceutils.so
 vendor/lib64/libsuidlookup.so
