@@ -4,6 +4,10 @@
 -->
 <resources>
     <integer name="config_num_physical_slots">2</integer>
+    <!-- Keep the non-removable data SIM disabled until the user enables it. -->
+    <integer-array name="config_builtinDataSimSlots" translatable="false">
+        <item>1</item>
+    </integer-array>
     <bool name="config_carrier_volte_available">true</bool>
     <bool name="config_device_volte_available">true</bool>
     <bool name="config_device_vt_available">true</bool>
