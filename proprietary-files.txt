@@ -1,11 +1,10 @@
-
 # Display
-vendor/lib64/libclstc_tm.so|d2173e2aaa3b56631041fc9e00682d580b992c69
-vendor/lib64/libhdr_als_adapter.so|691f3b8b57591ece620d854ba5abea1e57867bda
-vendor/lib64/libhdr_tm.so|680a056985cddce4c3a341cdfb601246292fab84
-vendor/lib64/libsdm-color.so|e64fd8d05bcd578e17e552cf581d7c0ba96e51bb
-vendor/lib64/libsdm-colormgr-algo.so|a6123541a0ac493473aa7a69c1a96dc6831146ae
-vendor/lib64/libsdmextension.so|f63a76761e2a71adfc57893a27c2ca0edf694080
+vendor/lib64/libclstc_tm.so
+vendor/lib64/libhdr_als_adapter.so
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdmextension.so
 
 # DSP / FastRPC
 vendor/bin/adsprpcd
