@@ -5,6 +5,9 @@ ro.vendor.config.lgsi.project=wuji
 vendor.display.use_smooth_motion=1
 vendor.display.lcd_density=360
 
+# Display P3 vendor render intent
+persist.sys.sf.native_mode=300
+
 # Cellular network coexistence (QMS)
 persist.vendor.data.mutualex.mode=wifipreferred
 
