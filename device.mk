@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayWuji \
     FrameworksResTargetWuji \
+    SettingsResOverlayWuji \
     SystemUIResOverlayWuji \
     TelephonyResOverlayWuji
 
