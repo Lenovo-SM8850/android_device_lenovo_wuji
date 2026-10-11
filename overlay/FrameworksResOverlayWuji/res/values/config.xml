@@ -3,6 +3,23 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Display P3 uses vendor render intent 300. -->
+    <integer-array name="config_availableColorModes">
+        <item>257</item>
+        <item>0</item>
+        <item>300</item>
+    </integer-array>
+    <integer-array name="config_displayCompositionColorModes">
+        <item>0</item>
+        <item>257</item>
+        <item>300</item>
+    </integer-array>
+    <integer-array name="config_displayCompositionColorSpaces">
+        <item>0</item>
+        <item>0</item>
+        <item>9</item>
+    </integer-array>
+
     <array name="config_autoBrightnessDisplayValuesNits">
         <item>10</item>
         <item>10</item>

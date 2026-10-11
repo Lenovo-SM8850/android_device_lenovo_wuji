@@ -103,6 +103,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayWuji \
     FrameworksResTargetWuji \
+    SettingsOverlayWuji \
     SystemUIOverlayWuji \
     TelephonyResOverlayWuji
 
