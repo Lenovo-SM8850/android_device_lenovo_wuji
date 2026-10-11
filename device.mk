@@ -111,6 +111,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.wuji.pen.rc
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_17ef_Product_622e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_622e.kl
+
 # Permission XMLs
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
