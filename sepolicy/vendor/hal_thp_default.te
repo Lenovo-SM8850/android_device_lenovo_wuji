@@ -1,0 +1,1 @@
+allow hal_thp_default vendor_sysfs_thp_screen_state:file { getattr open read write };

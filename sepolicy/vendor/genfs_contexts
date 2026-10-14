@@ -1,3 +1,23 @@
 genfscon proc /pen_type u:object_r:vendor_proc_goodix_pen:s0
 
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:goodix_fp/fp_nav_switch u:object_r:vendor_sysfs_goodix_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:goodix_fp/fp_suspend u:object_r:vendor_sysfs_goodix_fingerprint:s0
+
+genfscon sysfs /devices/platform/gt9976n_thp.0/version_info u:object_r:vendor_sysfs_thp_screen_state:s0
+genfscon sysfs /devices/platform/gt9976n_thp.0/gesture_enable u:object_r:vendor_sysfs_thp_screen_state:s0
+genfscon sysfs /devices/platform/gt9976n_thp.0/esd_info u:object_r:vendor_sysfs_thp_screen_state:s0
+
+genfscon sysfs /class/qcom-battery/fg1_fw_version u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg1_charge_full u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg1_charge_full_design u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg1_charge_counter u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg2_fw_version u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg2_charge_full u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg2_charge_full_design u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/fg2_charge_counter u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/usb_num_ports u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /class/qcom-battery/usb_2_real_type u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /class/qcom-battery/usb_2_typec_compliant u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /class/qcom-battery/moisture_detection_usb_2_status u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /class/qcom-battery/moisture_detection_usb_2_en u:object_r:vendor_sysfs_usb_supply:s0
