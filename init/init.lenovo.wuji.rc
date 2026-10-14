@@ -38,10 +38,10 @@ on early-init
 
 on post-fs-data
     wait_for_prop vendor.all.modules.ready 1
-    chown system system /sys/bus/platform/devices/soc:goodix_fp/fp_nav_switch
-    chown system system /sys/bus/platform/devices/soc:goodix_fp/fp_suspend
-    chmod 0660 /sys/bus/platform/devices/soc:goodix_fp/fp_nav_switch
-    chmod 0660 /sys/bus/platform/devices/soc:goodix_fp/fp_suspend
+    chown system system /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_nav_switch
+    chown system system /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_suspend
+    chmod 0660 /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_nav_switch
+    chmod 0660 /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_suspend
     chown system system /sys/bus/platform/devices/gt9976n_thp.0/gesture_enable
     chown system system /sys/bus/platform/devices/gt9976n_thp.0/esd_info
     chmod 0220 /sys/bus/platform/devices/gt9976n_thp.0/gesture_enable

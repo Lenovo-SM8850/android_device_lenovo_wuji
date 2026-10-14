@@ -1,8 +1,8 @@
 genfscon proc /pen_type u:object_r:vendor_proc_goodix_pen:s0
 
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:goodix_fp/fp_nav_switch u:object_r:vendor_sysfs_goodix_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:goodix_fp/fp_suspend u:object_r:vendor_sysfs_goodix_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:goodix_fp/goodix_fp/goodix/fp_nav_switch u:object_r:vendor_sysfs_goodix_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:goodix_fp/goodix_fp/goodix/fp_suspend u:object_r:vendor_sysfs_goodix_fingerprint:s0
 
 genfscon sysfs /devices/platform/gt9976n_thp.0/version_info u:object_r:vendor_sysfs_thp_screen_state:s0
 genfscon sysfs /devices/platform/gt9976n_thp.0/gesture_enable u:object_r:vendor_sysfs_thp_screen_state:s0
