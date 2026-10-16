@@ -12,3 +12,10 @@ on property:sys.lenovo.pen.type=2
 
 on property:sys.lenovo.pen.type=6
     write /proc/pen_type 6
+
+# The pen service reports the Bluetooth pen connection; this enables the controller's pen mode.
+on property:sys.lenovo.pen.support=1
+    write /proc/support_pen 1
+
+on property:sys.lenovo.pen.support=0
+    write /proc/support_pen 0
