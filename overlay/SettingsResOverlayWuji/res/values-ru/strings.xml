@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="color_mode_option_standard_wuji">Стандартный</string>
+    <string name="color_mode_option_vibrant_wuji">Яркий</string>
+    <string name="color_mode_option_p3_wuji">Естественная цветопередача</string>
+</resources>
