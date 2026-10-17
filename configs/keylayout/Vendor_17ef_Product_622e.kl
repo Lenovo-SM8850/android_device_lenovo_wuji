@@ -4,7 +4,8 @@
 
 # Lenovo Tab Pen Pro 2: report the top button clicks as standard stylus keys
 key usage 0x0c0614   STYLUS_BUTTON_TAIL
-key usage 0x0c0601   STYLUS_BUTTON_PRIMARY
+# Double click goes to the focused app.
+key usage 0x0c0601   MACRO_1
 key usage 0x0c0610   STYLUS_BUTTON_SECONDARY
 key usage 0x0c0611   STYLUS_BUTTON_TERTIARY
 
