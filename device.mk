@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
     init.wuji.pen.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/Vendor_17ef_Product_622e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_622e.kl
+    $(LOCAL_PATH)/configs/keylayout/Vendor_17ef_Product_622e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_622e.kl \
+    $(LOCAL_PATH)/configs/keylayout/lenovo-stylus.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/lenovo-stylus.kl
 
 # Sensors
 PRODUCT_COPY_FILES += \

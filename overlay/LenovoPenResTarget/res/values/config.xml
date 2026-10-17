@@ -8,6 +8,6 @@
         <item>17EF:617F=2</item>
         <item>17EF:622E=6</item>
     </string-array>
-    <string name="config_penInputName" translatable="false">goodix_ts_0_pen</string>
+    <string name="config_penInputName" translatable="false">lenovo-stylus</string>
     <string name="config_penUEventDevPath" translatable="false">/devices/platform/gt9976n_thp.0</string>
 </resources>
