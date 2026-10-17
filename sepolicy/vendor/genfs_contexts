@@ -1,4 +1,5 @@
 genfscon proc /pen_type u:object_r:vendor_proc_goodix_pen:s0
+genfscon proc /pen_wakeup_mode u:object_r:vendor_proc_goodix_pen:s0
 
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/goodix_fp/goodix/fp_nav_switch u:object_r:vendor_sysfs_goodix_fingerprint:s0
