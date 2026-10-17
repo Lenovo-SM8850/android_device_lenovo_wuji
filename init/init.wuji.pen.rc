@@ -5,6 +5,8 @@ on post-fs-data
     chmod 0660 /proc/pen_type
     chown system system /proc/HighReportRate
     chmod 0660 /proc/HighReportRate
+    # Let pen taps wake the screen; the driver applies the mode on suspend.
+    write /proc/pen_wakeup_mode 1
 
 # Keep the stock kernel default until a supported identity is reported.
 on property:sys.lenovo.pen.type=2
