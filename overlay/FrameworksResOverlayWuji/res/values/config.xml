@@ -118,5 +118,6 @@
     <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
 
     <!-- Evolution X -->
+    <bool name="config_supportSmart5G">true</bool>
     <string name="config_stockFingerprint" translatable="false">Lenovo/TB324ZC_PRC/TB324ZC:16/BQ2A.250831.001/ZUXOS_2.0.10.262_260919_PRC:user/release-keys</string>
 </resources>
