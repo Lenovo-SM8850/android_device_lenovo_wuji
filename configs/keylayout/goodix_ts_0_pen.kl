@@ -1,0 +1,13 @@
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Goodix touch controller pen device
+# Pen taps on the dark screen report KEY_POWER twice in quick succession;
+# treat them as a wake key so they do not toggle the screen or launch the camera.
+key 116   WAKEUP
+
+# Pen barrel buttons, as in Generic.kl
+key 329   STYLUS_BUTTON_TERTIARY
+key 331   STYLUS_BUTTON_PRIMARY
+key 332   STYLUS_BUTTON_SECONDARY

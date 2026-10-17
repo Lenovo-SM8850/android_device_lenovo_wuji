@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
     init.wuji.pen.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/goodix_ts_0_pen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_ts_0_pen.kl \
     $(LOCAL_PATH)/configs/keylayout/Vendor_17ef_Product_622e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_622e.kl
 
 # Performance
