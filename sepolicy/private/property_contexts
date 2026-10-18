@@ -3,3 +3,4 @@ sys.lenovo.pen.support u:object_r:lenovo_pen_support_prop:s0 exact enum 0 1 2
 
 persist.sys.fp.vendor u:object_r:lenovo_fingerprint_vendor_prop:s0 exact string
 gf.debug.dump_data u:object_r:vendor_goodix_debug_prop:s0 exact string
+sys.lenovo.pen.haptics u:object_r:lenovo_pen_haptics_prop:s0 exact bool
