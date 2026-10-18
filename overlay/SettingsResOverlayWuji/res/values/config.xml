@@ -14,4 +14,5 @@
         <item>257</item>
         <item>300</item>
     </integer-array>
+    <bool name="config_show_pen_writing_haptics">true</bool>
 </resources>
