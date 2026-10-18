@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayWuji \
     TelephonyResOverlayWuji
 
+# Launcher
+PRODUCT_PACKAGES += \
+    NexusLauncherOverlayWuji
+
 # Pen
 PRODUCT_PACKAGES += \
     init.wuji.pen.rc

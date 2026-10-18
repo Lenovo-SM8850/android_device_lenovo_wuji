@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<com.android.launcher3.Hotseat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/prv/res/com.google.android.apps.nexuslauncher"
+    android:id="@*com.google.android.apps.nexuslauncher:id/hotseat"
+    android:theme="@*com.google.android.apps.nexuslauncher:style/HomeScreenElementTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-18px"
+    android:clickable="false"
+    android:longClickable="false"
+    android:importantForAccessibility="no"
+    launcher:containerType="1" />
