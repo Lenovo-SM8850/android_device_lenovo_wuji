@@ -8,6 +8,9 @@ vendor.display.lcd_density=360
 # Display P3 vendor render intent
 persist.sys.sf.native_mode=300
 
+# Tone-map HDR in SurfaceFlinger at the current brightness
+vendor.display.hdr_client_composition=1
+
 # Cellular network coexistence (QMS)
 persist.vendor.data.mutualex.mode=wifipreferred
 
