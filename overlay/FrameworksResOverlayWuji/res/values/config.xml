@@ -108,4 +108,9 @@
     <!-- Display cutout -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 15,24 A 15,15 0 1,1 -15,24 A 15,15 0 1,1 15,24 Z @dp</string>
+
+    <!-- IWLAN -->
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
 </resources>
