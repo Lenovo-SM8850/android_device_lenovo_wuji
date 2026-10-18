@@ -2,6 +2,7 @@
 ro.vendor.config.lgsi.project=wuji
 
 # Display
+vendor.display.hdr_client_composition=1
 vendor.display.lcd_density=360
 vendor.display.use_smooth_motion=1
 
