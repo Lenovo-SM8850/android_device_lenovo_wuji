@@ -10,4 +10,5 @@
     </string-array>
     <string name="config_penInputName" translatable="false">goodix_ts_0_pen</string>
     <string name="config_penUEventDevPath" translatable="false">/devices/platform/gt9976n_thp.0</string>
+    <bool name="config_penWritingHapticsSupported">true</bool>
 </resources>

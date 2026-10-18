@@ -22,3 +22,5 @@ genfscon sysfs /class/qcom-battery/usb_2_real_type u:object_r:vendor_sysfs_usb_s
 genfscon sysfs /class/qcom-battery/usb_2_typec_compliant u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /class/qcom-battery/moisture_detection_usb_2_status u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /class/qcom-battery/moisture_detection_usb_2_en u:object_r:vendor_sysfs_usb_supply:s0
+
+genfscon proc /haptics u:object_r:vendor_proc_pen_haptics:s0
