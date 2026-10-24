@@ -13,6 +13,9 @@ PRODUCT_PACKAGES += \
     CneApp.libvndfwk_detect_jni.qti_vendor_symlink
 
 # Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946653341585811.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946653341585811.xml
+
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_COPY_FILES += \
