@@ -32,9 +32,6 @@ lib_fixups: lib_fixups_user_type = {
 
 # Device blob fixups
 blob_fixups: blob_fixups_user_type = {
-    'vendor/etc/displayconfig/display_id_4630946653341585811.xml': blob_fixup()
-        .regex_replace(r'<minimumHdrPercentOfScreen>0\.1</minimumHdrPercentOfScreen>',
-                       '<minimumHdrPercentOfScreen>0.05</minimumHdrPercentOfScreen>'),
         (
             'vendor/lib64/soundfx/libquasar.so',
             'vendor/lib64/camera/components/com.qti.node.fd.so',

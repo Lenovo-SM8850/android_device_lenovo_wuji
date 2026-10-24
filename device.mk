@@ -59,6 +59,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd.xml \
     $(LOCAL_PATH)/configs/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_whale/resourcemanager_canoe_qrd_wsa884x.xml
 
+# Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4630946653341585811.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946653341585811.xml
+
 # CNE
 PRODUCT_PACKAGES += \
     CneApp.libvndfwk_detect_jni.qti_vendor_symlink
