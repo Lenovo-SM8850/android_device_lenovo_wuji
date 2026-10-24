@@ -15,4 +15,6 @@
         <item>300</item>
     </integer-array>
     <bool name="config_show_pen_writing_haptics">true</bool>
+    <!-- The panel controls brightness during its low-power idle display mode. -->
+    <bool name="config_show_aod_brightness">false</bool>
 </resources>
