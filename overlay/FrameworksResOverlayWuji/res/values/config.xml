@@ -100,6 +100,9 @@
 
 
 
+    <!-- Keep the panel's idle timing out of normal display use. -->
+    <integer name="config_minPhysicalRefreshRate">60</integer>
+
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
     <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
