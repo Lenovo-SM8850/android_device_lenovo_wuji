@@ -180,3 +180,6 @@ DEVICE_MANIFEST_FILE += device/lenovo/wuji/vintf/manifest_canoe.xml
 
 # Include the proprietary files makefile.
 $(call inherit-product, vendor/lenovo/wuji/wuji-vendor.mk)
+
+# Touchscreen rotation configuration
+PRODUCT_PACKAGES += TouchscreenRotationTarget
