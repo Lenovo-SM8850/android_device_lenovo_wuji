@@ -2,7 +2,7 @@
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
     <string name="config_rotationNode" translatable="false">/proc/panel_direction</string>
-    <string name="config_edgeGridNode" translatable="false">/proc/edge_grid_zone</string>
-    <string name="config_edgeGridValue" translatable="false">0,0,0,0</string>
-    <bool name="config_supportsEdgeGrid">true</bool>
+    <string name="config_edgeGridNode" translatable="false"></string>
+    <string name="config_edgeGridValue" translatable="false"></string>
+    <bool name="config_supportsEdgeGrid">false</bool>
 </resources>
