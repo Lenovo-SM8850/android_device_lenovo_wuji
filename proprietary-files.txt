@@ -744,3 +744,7 @@ vendor/lib64/libqllengine.so|9fdb63a485e3d86550a3fd4fc0504e04bfe10a51
 vendor/lib64/libqsegnet.so|240def1532c6a1dc2d56aac8e9d41fcf8e77cab8
 vendor/lib64/libtfestriping.so|8d4919bcc955b96b74fcc82cdbce446f37d64ddd
 vendor/lib64/libubifocus.so|8d93cf98041bc70b7b42961ae5511f21cf6b6226
+
+# Game performance policy (Verbatim)
+# From TB324ZC_CN_OPEN_USER_Q00029.0_A16_ZUXOS_2.0.10.262_ST_260919
+system/etc/gameperfconfig.xml:vendor/etc/gameperfconfig.xml
