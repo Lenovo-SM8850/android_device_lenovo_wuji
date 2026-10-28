@@ -70,6 +70,12 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/clstc_config_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/clstc_config_library.xml
 
+# Game performance
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/game-policy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/game-policy.xml
+
+PRODUCT_PACKAGES += init.kernel.post_boot-canoe_default_6_2.sh
+
 # IMS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.qualcomm.qti.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.qualcomm.qti.ims.xml
@@ -180,8 +186,6 @@ $(call soong_config_set_bool,lenovotouchpolicy,report_threshold_text,false)
 $(call soong_config_set_bool,lenovotouchpolicy,game_edge_text,false)
 $(call soong_config_set,lenovotouchpolicy,support_pen_linking,2)
 $(call soong_config_set,lenovotouchpolicy,support_pen_session_off,2)
-
-PRODUCT_PACKAGES += init.kernel.post_boot-canoe_default_6_2.sh
 
 # VINTF
 DEVICE_MANIFEST_FILE += device/lenovo/wuji/vintf/manifest_canoe.xml
