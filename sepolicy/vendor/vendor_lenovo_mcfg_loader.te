@@ -31,3 +31,7 @@ neverallow vendor_lenovo_mcfg_loader { functionfs }:file write;
 
 # Claiming a durable restart token requests the restricted init helper.
 set_prop(vendor_lenovo_mcfg_loader, vendor_lenovo_mcfg_restart_prop)
+
+# Read the mounted modem build metadata without enumerating firmware directories.
+allow vendor_lenovo_mcfg_loader firmware_file:dir search;
+allow vendor_lenovo_mcfg_loader firmware_file:file { getattr open read };
