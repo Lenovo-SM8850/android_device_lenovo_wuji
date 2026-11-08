@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: Apache-2.0
+# Attestation keybox provisioning (install_attest_key, check_attest_keybox).
+# Qualcomm declares the script domain; these are the stock 2.5 keybox additions.
+allow vendor_init-qti-keymaster-sh build_attestation_prop:file { getattr map open read };
+allow vendor_init-qti-keymaster-sh mnt_vendor_file:dir { add_name create getattr remove_name search write };
+allow vendor_init-qti-keymaster-sh mnt_vendor_file:file { append create getattr open read unlink write };
+allow vendor_init-qti-keymaster-sh self:qipcrtr_socket { append bind connect create getattr getopt lock map read setattr setopt shutdown write };
+allow vendor_init-qti-keymaster-sh servicemanager:binder { call };
+allow vendor_init-qti-keymaster-sh tee_device:chr_file { getattr ioctl open read write };
+allow vendor_init-qti-keymaster-sh vendor_dmabuf_qseecom_heap_device:chr_file { getattr ioctl lock map open read watch watch_reads };
+allow vendor_init-qti-keymaster-sh vendor_dmabuf_secure_sp_tz_heap_device:chr_file { getattr ioctl lock map open read watch watch_reads };
+allow vendor_init-qti-keymaster-sh vendor_dmabuf_sp_hlos_heap_device:chr_file { getattr ioctl open read write };
+allow vendor_init-qti-keymaster-sh vendor_dmabuf_system_heap_device:chr_file { getattr ioctl lock map open read watch watch_reads };
+allow vendor_init-qti-keymaster-sh vendor_file:dir { search };
+allow vendor_init-qti-keymaster-sh vendor_file:file { execute execute_no_trans getattr map open read };
+allow vendor_init-qti-keymaster-sh vendor_hal_keymint_spu_qti:binder { call };
+allow vendor_init-qti-keymaster-sh vendor_init_exec:file { execute getattr open read };
+allow vendor_init-qti-keymaster-sh vendor_membuf_dev:chr_file { getattr ioctl open read };
+allow vendor_init-qti-keymaster-sh vendor_persist_file:dir { add_name create getattr read remove_name search write };
+allow vendor_init-qti-keymaster-sh vendor_persist_file:file { append create getattr open read unlink write };
+allow vendor_init-qti-keymaster-sh vendor_skp_device:chr_file { getattr open read };
+allow vendor_init-qti-keymaster-sh vendor_spcom_device:chr_file { getattr ioctl open read write };
+allow vendor_init-qti-keymaster-sh vendor_spss_utils_device:chr_file { getattr ioctl open read write };
+allow vendor_init-qti-keymaster-sh vendor_vm_cp_spss_hlos_shared_device:chr_file { getattr open read };
+allow vendor_init-qti-keymaster-sh vendor_vm_hlos_device:chr_file { getattr open read };
+get_prop(vendor_init-qti-keymaster-sh, vendor_tee_listener_prop)
+set_prop(vendor_init-qti-keymaster-sh, vendor_lenovotb_init_prop)

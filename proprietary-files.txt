@@ -1,6 +1,17 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from wuji (TB324ZC_CN_OPEN_USER_Q00029.0_A17_ZUXOS_2.5.10.068_ST_261031).
 
+# Attestation keybox provisioning
+vendor/bin/KmInstallKeybox
+vendor/bin/check_attest_keybox
+vendor/bin/decrypt_keybox
+vendor/bin/install_attest_key
+vendor/bin/spu_install_keybox
+vendor/etc/attest/TB324ZC000000000_strongbox.xml.enc
+vendor/etc/attest/TB324ZC000000006.xml.enc
+vendor/etc/init/check_attest_keybox.rc
+vendor/etc/init/install_attest_key.rc
+
 # Audio
 vendor/etc/DIAG_audio_07-07.cfg
 vendor/etc/acdbdata/alor_cdp/CDP_alor_acdb_cal.acdb
