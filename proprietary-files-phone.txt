@@ -70,9 +70,7 @@ vendor/etc/init/qms.rc
 vendor/etc/init/vendor.dpmd.rc
 vendor/etc/seccomp_policy/imsrtp.policy
 vendor/etc/seccomp_policy/qms.policy
-vendor/etc/sysconfig/cacert-oem-defined-uids.xml
 vendor/etc/vintf/manifest/ImsRtpService-aidl.xml
-vendor/etc/vintf/manifest/cacert-saidl.xml
 vendor/etc/vintf/manifest/datafactoryservice-saidl.xml
 vendor/etc/vintf/manifest/dpm-saidl.xml
 vendor/etc/vintf/manifest/imsdcservice-saidl.xml
