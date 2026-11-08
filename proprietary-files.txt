@@ -787,7 +787,6 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libsession_compress_config.so
 vendor/lib64/libsession_voice_config.so
 vendor/lib64/libsn100u_fw.so
-vendor/lib64/libsn300u_fw.so
 vendor/lib64/libssdStaticHelper.so
 vendor/lib64/libstream_compress.so
 vendor/lib64/libstream_pcm.so
