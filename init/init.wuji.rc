@@ -87,5 +87,3 @@ on property:sys.usb.otg.reset=1
 
 # BEGIN Lenovo, zengwang2, 2026/07/13, WUJIC-998: save uefi log in userdebug version
 on property:sys.boot_completed=1 && property:ro.vendor.build.type=userdebug
-    mkdir /mnt/vendor/logfs 0644 system system
-    mount vfat /dev/block/by-name/logfs /mnt/vendor/logfs rw noatime wait
