@@ -107,7 +107,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <sdrHdrRatioMap>
             <point>
                 <sdrNits>4.000</sdrNits>
-                <hdrRatio>4.000</hdrRatio>
+                <hdrRatio>4.100</hdrRatio>
             </point>
             <point>
                 <sdrNits>75.000</sdrNits>

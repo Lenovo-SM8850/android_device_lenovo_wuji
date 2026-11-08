@@ -32,10 +32,6 @@
 
 import /vendor/etc/init/hw/init.lenovo.rc
 
-on early-init
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 2112000
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 2880000
-
 on post-fs-data
     wait_for_prop vendor.all.modules.ready 1
     chown system system /sys/bus/platform/devices/soc:goodix_fp/goodix_fp/goodix/fp_nav_switch
@@ -74,10 +70,6 @@ service colorbin /vendor/bin/colorbin
 on post-fs
     start colorbin
 
-    # MPSS recovery
-    chown system system /sys/class/remoteproc/remoteproc3/recovery
-    chmod 0664 /sys/class/remoteproc/remoteproc3/recovery
-    write /sys/class/remoteproc/remoteproc3/recovery enabled
 on property:sys.lenovo.attestationkey=1
     setprop ro.odm.lenovo.attestationkey ${sys.lenovo.attestationkey}
 
@@ -87,5 +79,13 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
     chmod 0666 sys/devices/platform/soc/941b000.qcom,cci0/941b000.qcom,cci0:qcom,actuator0/moveVCM
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 3628800
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 4742400
+
+# WUJIX code for WUJIC-931 by zhuzw4 at 2026/09/03 start
+on property:sys.usb.otg.reset=1
+    write /sys/class/power_supply/usb/usb_otg_reset 1
+    setprop sys.usb.otg.reset 0
+
+# BEGIN Lenovo, zengwang2, 2026/07/13, WUJIC-998: save uefi log in userdebug version
+on property:sys.boot_completed=1 && property:ro.vendor.build.type=userdebug
+    mkdir /mnt/vendor/logfs 0644 system system
+    mount vfat /dev/block/by-name/logfs /mnt/vendor/logfs rw noatime wait

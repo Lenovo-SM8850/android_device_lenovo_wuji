@@ -27,8 +27,8 @@ PRODUCT_SYSTEM_NAME := TB324ZC
 PRODUCT_SYSTEM_DEVICE := TB324ZC
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="TB324ZC-user 16 BQ2A.250831.001 eng.builds release-keys" \
-    BuildFingerprint=Lenovo/TB324ZC_PRC/TB324ZC:16/BQ2A.250831.001/ZUXOS_2.0.10.262_260919_PRC:user/release-keys \
-    BuildSystemFingerprint=Lenovo/TB324ZC_PRC/TB324ZC:16/BQ2A.250831.001/ZUXOS_2.0.10.262_260919_PRC:user/release-keys \
+    BuildDesc="TB324ZC-user 17 CQ2A.260712.001 eng.builds release-keys" \
+    BuildFingerprint=Lenovo/TB324ZC_PRC/TB324ZC:17/CQ2A.260712.001/ZUXOS_2.5.10.068_261031_PRC:user/release-keys \
+    BuildSystemFingerprint=Lenovo/TB324ZC_PRC/TB324ZC:17/CQ2A.260712.001/ZUXOS_2.5.10.068_261031_PRC:user/release-keys \
     DeviceName=TB324ZC \
     DeviceProduct=TB324ZC

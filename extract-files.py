@@ -54,7 +54,6 @@ blob_fixups: blob_fixups_user_type = {
             'vendor/lib64/camera/components/com.qti.node.fd.so',
             'vendor/lib64/hw/camera.qcom.core.so',
             'vendor/lib64/libcamerapoweroptfeature.so',
-            'vendor/lib64/libcamxdumpinforecorder.so',
         ): blob_fixup()
             .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
         'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
@@ -95,6 +94,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
     'vendor/lib64/libvideooptfeature.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
+    'vendor/lib64/libcamxdumpinforecorder.so': blob_fixup().replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -72,6 +72,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/clstc_config_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/clstc_config_library.xml \
     $(LOCAL_PATH)/configs/display/perf_hint_threshold.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/perf_hint_threshold.xml \
     $(LOCAL_PATH)/configs/display/privacy_regions_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/privacy_regions_offsets.xml
 
@@ -172,6 +173,8 @@ PRODUCT_PACKAGES += \
     thpd
 
 PRODUCT_PACKAGES += TouchscreenRotationTarget
+
+PRODUCT_PACKAGES += init.kernel.post_boot-canoe_default_6_2.sh
 
 # VINTF
 DEVICE_MANIFEST_FILE += device/lenovo/wuji/vintf/manifest_canoe.xml
