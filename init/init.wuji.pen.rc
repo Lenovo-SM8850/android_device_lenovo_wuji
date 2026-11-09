@@ -17,15 +17,7 @@ on property:sys.lenovo.pen.type=2
 on property:sys.lenovo.pen.type=6
     write /proc/pen_type 6
 
-# The pen service reports the Bluetooth pen connection; this enables the controller's pen mode.
-on property:sys.lenovo.pen.support=2
-    write /proc/support_pen 2
-
-on property:sys.lenovo.pen.support=1
-    write /proc/support_pen 1
-
-on property:sys.lenovo.pen.support=0
-    write /proc/support_pen 0
+# The touch policy service owns the pen connection node.
 
 # Read-only host status for LenovoPen; the app sets only the boolean property.
 on post-fs-data

@@ -176,6 +176,10 @@ PRODUCT_PACKAGES += \
     thpd
 
 PRODUCT_PACKAGES += LenovoTouchTarget
+$(call soong_config_set_bool,lenovotouchpolicy,report_threshold_text,false)
+$(call soong_config_set_bool,lenovotouchpolicy,game_edge_text,false)
+$(call soong_config_set,lenovotouchpolicy,support_pen_linking,2)
+$(call soong_config_set,lenovotouchpolicy,support_pen_session_off,2)
 
 PRODUCT_PACKAGES += init.kernel.post_boot-canoe_default_6_2.sh
 
