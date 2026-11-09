@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
     libgdix_tsd \
     thpd
 
-PRODUCT_PACKAGES += TouchscreenRotationTarget
+PRODUCT_PACKAGES += LenovoTouchTarget
 
 PRODUCT_PACKAGES += init.kernel.post_boot-canoe_default_6_2.sh
 
