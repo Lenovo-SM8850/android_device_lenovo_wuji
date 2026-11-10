@@ -26,7 +26,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Verified Boot
-BOARD_AVB_BOOT_ROLLBACK_INDEX := 1785888000
+BOARD_AVB_BOOT_ROLLBACK_INDEX := 1788566400
 
 # Include the proprietary files BoardConfig.
 include vendor/lenovo/wuji/BoardConfigVendor.mk
