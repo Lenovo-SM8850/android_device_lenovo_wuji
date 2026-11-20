@@ -19,7 +19,6 @@ vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_sym
 vendor/app/IWlanService/IWlanService.apk
 vendor/app/TxPwrAdmin/TxPwrAdmin.apk
 vendor/etc/audio/sku_alor/audio_effects_config_stub.xml
-vendor/etc/bpf/qmsUidStats.o
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -66,16 +65,13 @@ vendor/etc/init/ims-dataservice-daemon.rc
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.qti.fm.rc
-vendor/etc/init/qms.rc
 vendor/etc/init/vendor.dpmd.rc
 vendor/etc/seccomp_policy/imsrtp.policy
-vendor/etc/seccomp_policy/qms.policy
 vendor/etc/vintf/manifest/ImsRtpService-aidl.xml
 vendor/etc/vintf/manifest/datafactoryservice-saidl.xml
 vendor/etc/vintf/manifest/dpm-saidl.xml
 vendor/etc/vintf/manifest/imsdcservice-saidl.xml
 vendor/etc/vintf/manifest/mwqem-saidl.xml
-vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.ims.factoryaidlservice.xml
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libCneAppJni.so

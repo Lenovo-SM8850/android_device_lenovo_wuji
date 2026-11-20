@@ -653,7 +653,6 @@ vendor/bin/hw/vendor.qti.MemHal-service
 vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qti.kernel.debug-canoe.sh
 vendor/bin/ks
-vendor/bin/qms
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/bin/qwesd
@@ -683,12 +682,6 @@ vendor/lib64/libprekill.so
 vendor/lib64/libqfdadapter.so
 vendor/lib64/libqll.so
 vendor/lib64/libqllengine.so
-vendor/lib64/libqms.so
-vendor/lib64/libqms_client.so
-vendor/lib64/libqms_coex_sdk.so
-vendor/lib64/libqms_optimized_route_mgr_sdk.so
-vendor/lib64/libqms_packetstats_sdk.so
-vendor/lib64/libqms_sdf_sdk.so
 vendor/lib64/libqpt.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqsegnetunittest.so
