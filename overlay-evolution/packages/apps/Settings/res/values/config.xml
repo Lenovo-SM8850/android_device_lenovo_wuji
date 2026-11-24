@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- The picture of the device on the model page:
+         system/etc/deviceinfo/device_image_deeppurple.png from
+         wuji (TB324ZC_CN_OPEN_USER_Q00029.0_A17_ZUXOS_2.5.10.068_ST_261031). -->
+    <string name="config_deviceImageDrawable" translatable="false">wuji</string>
+</resources>

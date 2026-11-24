@@ -96,6 +96,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v3/video_system_specs.json
 
 # Overlays
+# The Settings resources add a drawable, which only a static overlay can do.
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-evolution
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay-evolution
+
 PRODUCT_PACKAGES += \
     FrameworksResOverlayWuji \
     FrameworksResTargetWuji \
